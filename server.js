@@ -16,6 +16,9 @@ app.set('view engine', 'html');
 app.get('/', (req, res) => {
   res.render('index');
 });
+app.get('/screen', (req, res) => {
+  res.render('screen');
+});
 
 app.listen(process.env.PORT || 3000);
 

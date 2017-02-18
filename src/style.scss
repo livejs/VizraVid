@@ -1,3 +1,60 @@
-html {
-  background:red;
+@import '_reset.scss';
+
+$vertical:2vh;
+$gutter:2vw;
+
+.spacing {
+  padding: $vertical $gutter;
+  box-sizing: border-box;
+}
+.left-box {
+  width: 35vw;
+  @extend .spacing;
+}
+.right-box {
+  width: 60vw;
+  @extend .spacing;
+}
+
+body {
+  background:hsla(0,0%,90%,1);
+  font-family: sans-serif; font-size:100%;
+}
+
+// controller view ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.controller {
+  position:relative;
+  & > header {
+    h1, nav {display: inline-block;}
+    h1 {@extend .left-box;}
+    nav {@extend .right-box;}
+  }
+  & > div {
+    width:100vw; height:100vh;
+    display:none; overflow:auto;
+    & > section:nth-of-type(1) {min-height:100vh; float:left;}
+    & > section:nth-of-type(1) {@extend .left-box;}
+    & > section:nth-of-type(2) {@extend .right-box;}
+  }
+  #create {display:block;}
+}
+
+// screen view ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#screen {
+  margin:0px; padding:0px;
+  position: relative; overflow: hidden;
+  width: 100vw; height: 100vh;
+  background: black;
+
+  .track {
+    position:absolute; top:0px; left:0px;
+    margin:0px; padding:0px;
+    width: 100vw; height: 100vh;
+
+    & > svg, & > section  {
+      position:absolute; top:0px; left:0px;
+      margin:0px; padding:0px;
+      width: 100vw; height: 100vh;
+    }
+  }
 }

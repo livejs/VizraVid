@@ -13,13 +13,76 @@
   
   <meta name="author" content="Ruth John (@rumyra)">
   <meta name="dcterms.rightsHolder" content="Ruth John for Rumyra Ltd, United Kingdom, 2015">
-  <title>Vizra | Browser based VJing software</title>
+  <title>Vizra | Browser based VJing software by Rumyra</title>
 
-  <!--CHANGE THIS TO USE ROLL UP?-->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
   
 </head>
-<body>
-  <h1>VIZRA!!!</h1>
+<body class="controller">
+  <header>
+    <h1>Vizra</h1>
+    <nav>
+      <a href="#create">Create</a>
+      <a href="#manage">Manage</a>
+      <a href="#showtime">Showtime</a>
+    </nav>
+  </header>
+
+  <div id="create">
+    <section class="library">
+      <header>
+        <h2>Library</h2>
+        <button>Add</button>
+      </header>
+      <ul>
+        <li>Video</li>
+        <li>3D</li>
+        <li>Gifs</li>
+        <li>Code</li>
+        <li>Photos</li>
+      </ul>
+    </section>
+    <section>
+      <header><nav><button>Scratch Pad</button><button>Viewer</button></nav></header>
+    </section>
+  </div>
+
+  <div id="manage">
+    <header>
+      <nav>
+        <a href="#createset">Create Set</a>
+        <a href="#confmidi">Configure MIDI</a>
+      </nav>
+    </header>
+    <div id="createset">
+      <section>
+        <header><h2>Library</h2></header>
+        <ul>
+          <li>Video</li>
+          <li>3D</li>
+          <li>Gifs</li>
+          <li>Code</li>
+          <li>Photos</li>
+        </ul>
+      </section>
+      <section>
+        <header><h2>Sets</h2><button>Create</button></header>
+      </section>
+    </div>
+  </div>
+
+  <div id="showtime">
+    <p>Select MIDI?</p>
+    <p>Threshold</p>
+    <p>Set one</p>
+    <p>Set two</p>
+    <p>Set three</p>
+    <p>Set four etc...</p>
+    <p>Effect One</p>
+    <p>Effect Two</p>
+    <p>Effect Three</p>
+    <p>Effect Four etc...based on setup</p>
+    <button>GO</button>
+  </div>
 </body>
 </html>

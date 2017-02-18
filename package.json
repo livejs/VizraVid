@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    "build-css": "node-sass --output-style compressed -o public src",
+    "build-css": "node-sass --output-style compressed -o public/styles src",
     "watch-sass": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "Ruth John <rumyra@gmail.com>",
