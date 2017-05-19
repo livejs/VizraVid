@@ -20,22 +20,52 @@
 </head>
 <body>
   
-<div id="screen">
-  <section class="track track_left"></section>
-  <section class="track track_right"></section>
-</div>
+<div class="container">
+    
+    <section id="screen">
 
-<script type="text/javascript" src="scripts/audio.js"></script>
-<script type="text/javascript" src="scripts/midi.js"></script>
+      <div class="screen">
+        <section class="video">
+          <video autoplay loop>
+            <source src="library/cartoons1/thundercats01.mp4" type="video/mp4">
+          </video>
+        </section>
+        <section class="dom">
+          <svg></svg>
+        </section>
+      </div>
+
+
+      <div class="screen">
+        <section class="video">
+          <video autoplay loop>
+            <source src="library/cartoons1/heman.mp4" type="video/mp4">
+          </video>
+        </section>
+        <section class="dom">
+          <svg></svg>
+        </section>
+      </div>
+
+      <div id="black"></div>
+      <div id="white"></div>
+    </section>
+  </div>
+
+  
+<script src="scripts/bezier.js"></script>
+<script src="scripts/d3.min.js"></script>
+<script src="scripts/midiCont.js"></script>
+<script src="scripts/sets.js"></script>
+
+<script src="scripts/visualFuncs.js"></script>
+<script src="scripts/library.js"></script>
+<script src="scripts/control.js"></script>
+<script src="scripts/setup.js"></script>
 
 <script type="text/javascript">
-  //load library
-  //on midi get library item
-  // if this item type do this if not do this if not do this
-  // work out how to switch for d3 and dom /shrug
 
 
 </script>
-
 </body>
 </html>

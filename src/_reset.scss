@@ -23,7 +23,7 @@ figure {
 section, article, aside, footer, nav, header, hgroup, details, figure, figcaption, summary { display: block; }
 audio, canvas, video { display: inline-block; }
 /*Prevents iOS text size adjust after orientation change, without disabling user zoom.*/
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%;}
 // legacy support
 [hidden] { display: none; }
 // remember to define focus styles!
