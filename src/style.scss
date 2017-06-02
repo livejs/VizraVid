@@ -54,7 +54,10 @@ body {
 }
 
 .video {display:none;}
-.video video {width:100%; height:auto;} 
+.video video {
+  width:100%; height:auto;
+  filter: contrast(120%) brightness(120%);
+}
 
 svg, canvas {
   width: 100vw;

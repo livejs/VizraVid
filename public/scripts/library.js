@@ -10,6 +10,19 @@ var library = {
 
   video: {
 
+    island:
+    [
+      "cell",
+      "habClips",
+      "showcase",
+      "peluzah",
+      "island",
+      "cellar",
+      "habitus",
+      "dusty"
+      
+    ],
+
     games:
     [
       "pong",

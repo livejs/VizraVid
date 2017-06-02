@@ -49,6 +49,19 @@ function reqAnim() {
 
   var mixData = adjustFreqData(12);
 
+  if ( (d3.quantile(mixData, 0.75)) > 110 ) {
+    console.log(d3.quantile(mixData, 0.75)); 
+    videoEls[0].style.filter = 'invert(100%)';
+    videoEls[1].style.filter = 'invert(100%)';
+    svgEls[0].style.backgroundColor = 'white';
+    svgEls[1].style.backgroundColor = 'white';
+  } else {
+    videoEls[0].style.filter = 'invert(0%) contrast(120%) brightness(120%)';
+    videoEls[1].style.filter = 'invert(0%) contrast(120%) brightness(120%)';
+    svgEls[0].style.backgroundColor = 'transparent';
+    svgEls[1].style.backgroundColor = 'transparent';
+  }
+
   for (var i=0; i<12; i++) {
     if (mixData[i] > threshold){
       if (i<6) {

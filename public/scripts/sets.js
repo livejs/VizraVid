@@ -1,4 +1,5 @@
 var sets = [
+  {name: 'island', type: 'video'},
   {name: 'games', type: 'video'},
   {name: 'abstract', type: 'video'},
   {name: 'cartoons1', type: 'video'},
