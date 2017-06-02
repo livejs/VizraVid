@@ -80,16 +80,20 @@ var library = {
       superChart,
       superSun,
       spectrum,
+      superChart,
       stripes
     ],
 
     diagCirc: [
-      diagonalCircles,
-      diagCircLine,
       dots,
       dots2,
+      diagonalCircles,
+      diagCircLine,
+      
       triangles,
-      triangles2
+      triangles2,
+      diagonalCircles,
+      diagCircLine
     ]
 
   }

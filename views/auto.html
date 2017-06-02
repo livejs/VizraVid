@@ -67,6 +67,70 @@
 
 <script type="text/javascript">
 
+var setCounter = 0;
+var currentSet = sets[setCounter];
+function swapSet() {
+  if (setCounter === (sets.length-1)) {
+    setCounter = 0;
+  } else {
+    setCounter++;
+  }
+  currentSet = sets[setCounter];
+}
+
+var assetCounter = 0;
+function swapAsset() {
+
+  if (currentSet.type === 'video') {
+
+    changeVidSrc(videoEls[screenNo], 'library/'+currentSet.name+'/'+library.video[currentSet.name][assetCounter]+'.mp4');
+
+    console.log(library.video[currentSet.name][assetCounter]);
+
+    showVideo(vidScreens[screenNo], domScreens[screenNo]);
+
+
+  } else {
+
+    var svg = d3.select(svgEls[screenNo]);
+    svg.selectAll('*').remove();
+    showCss(vidScreens[screenNo], domScreens[screenNo]);
+    screenDomFunc[screenNo] = library.dom[currentSet.name][assetCounter];
+    // reqAnim();
+
+  }
+
+  if (assetCounter === 7) {
+    assetCounter = 0;
+  } else {
+    assetCounter++;
+  }
+
+  if (screenNo === 1) {
+    screenNo = 0;
+  } else {
+    screenNo = 1;
+  }
+
+}
+// swapAsset();
+
+// function swapVid() {
+//   // console.log('called');
+//   var newInt = getRandomInt(0,37);
+//   var vidEl = videoElOne;
+//   var vidSrc = allTheVids.videos[newInt];
+//   console.log(vidSrc, vidEl);
+//   if (counter%2 === 0) {
+//     vidEl = videoElTwo;
+//   }
+//   changeVidSrc(vidEl, 'media/'+allTheVids.videos[newInt]+'.mp4');
+//   counter++;
+// }
+
+setInterval(swapAsset, 10000);
+setInterval(swapSet, 80000);
+
 
 </script>
 </body>

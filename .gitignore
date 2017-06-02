@@ -38,3 +38,6 @@ jspm_packages
 
 # envvars
 .env
+
+# library assets
+library

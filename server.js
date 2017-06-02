@@ -19,6 +19,9 @@ app.get('/', (req, res) => {
 app.get('/screen', (req, res) => {
   res.render('screen');
 });
+app.get('/auto', (req, res) => {
+  res.render('auto');
+});
 
 app.listen(process.env.PORT || 3000);
 

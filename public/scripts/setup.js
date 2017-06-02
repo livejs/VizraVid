@@ -22,7 +22,9 @@ const blackEl = document.getElementById('black'),
 
 var set = sets[0],
   screenNo = 1,
-  threshold = 0;
+  threshold = 100;
+
+var screenDomFunc = [diagonalCircles, dots];
 
 const easing = BezierEasing(0.01, 0.8, 0.8, 0.01);
 const audioApi = new window.AudioContext;
@@ -83,8 +85,6 @@ document.addEventListener('keyup', (event) => {
     console.log("screen: "+screenNo);
   }
 }, false);
-
-var screenDomFunc = [diagonalCircles, dots];
 
 // getUserMedia success callback -> pipe audio stream into audio API
 function gotStream(stream) {
