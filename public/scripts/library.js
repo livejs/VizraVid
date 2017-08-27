@@ -1,10 +1,254 @@
 var library = {
 
+  islCell : {
+    file: "cell",
+    type: "video",
+    for: "island"
+  },
+
+  habClips : {
+    file: "habClips",
+    type: "video",
+    for: "island"
+  },
+
+  islShowcase: {
+    file: "showcase",
+    type: "video",
+    for: "island"
+  },
+
+  peluzah: {
+    file: "peluzah",
+    type: "video",
+    for: "island"
+  },
+
+  islandProm: {
+    file: "island",
+    type: "video",
+    for: "island"
+  },
+
+  islCellar: {
+    file: "cellar",
+    type: "video",
+    for: "island"
+  },
+
+  habitus: {
+    file: "habitus",
+    type: "video",
+    for: "island"
+  },
+
+  dusty: {
+    file: "dusty",
+    type: "video",
+    for: "island"
+  },
+
+  pong: {
+    file: "pong",
+    type: "video",
+    for: "games"
+  },
+
+  chuckie: {
+    file: "chuckie",
+    type: "video",
+    for: "games"
+  },
+
+  pacman: {
+    file: "pacman",
+    type: "video",
+    for: "games"
+  },
+
+  spaceInv: {
+    file: "spaceinv",
+    type: "video",
+    for: "games"
+  },
+
+  breakout: {
+    file: "breakout",
+    type: "video",
+    for: "games"
+  },
+
+  donkey: {
+    file: "donkey",
+    type: "video",
+    for: "games"
+  },
+
+  tetris: {
+    file: "tetris",
+    type: "video",
+    for: "games"
+  },
+
+  xenon: {
+    file: "xenon",
+    type: "video",
+    for: "games"
+  },
+
+  absRocket: {
+    file: "rockets01",
+    type: "video",
+    for: "abstract"
+  },
+
+  absSpace: {
+    file: "space01",
+    type: "video",
+    for: "abstract"
+  },
+
+  absSquare: {
+    file: "squares01",
+    type: "video",
+    for: "abstract"
+  },
+
+  absDots: {
+    file: "dots07",
+    type: "video",
+    for: "abstract"
+  },
+
+  absLines: {
+    file: "lines01",
+    type: "video",
+    for: "abstract"
+  },
+
+  absDots2: {
+    file: "dots02",
+    type: "video",
+    for: "abstract"
+  },
+
+  absDots3: {
+    file: "dots06",
+    type: "video",
+    for: "abstract"
+  },
+
+  absHex: {
+    file: "hexagons01",
+    type: "video",
+    for: "abstract"
+  },
+
+  thundercats: {
+    file: "thundercats01",
+    type: "video",
+    for: "cartoons"
+  },
+
+  heman: {
+    file: "heman",
+    type: "video",
+    for: "cartoons"
+  },
+
+  shera: {
+    file: "shera",
+    type: "video",
+    for: "cartoons"
+  },
+
+  defenders: {
+    file: "defenders",
+    type: "video",
+    for: "cartoons"
+  },
+
+  bucky: {
+    file: "bucky",
+    type: "video",
+    for: "cartoons"
+  },
+
+  battle: {
+    file: "battle",
+    type: "video",
+    for: "cartoons"
+  },
+
+  teenage: {
+    file: "teenage",
+    type: "video",
+    for: "cartoons"
+  },
+
+  dungeons: {
+    file: "dungeons",
+    type: "video",
+    for: "cartoons"
+  },
+
+  dangermouse: {
+    file: "dangermouse",
+    type: "video",
+    for: "cartoons"
+  },
+
+  mysterious: {
+    file: "mysterious",
+    type: "video",
+    for: "cartoons"
+  },
+
+  bananaman: {
+    file: "bananaman",
+    type: "video",
+    for: "cartoons"
+  },
+
+  superted: {
+    file: "superted",
+    type: "video",
+    for: "cartoons"
+  },
+
+  powerpuff: {
+    file: "powerpuff",
+    type: "video",
+    for: "cartoons"
+  },
+
+  pokemon: {
+    file: "pokemon",
+    type: "video",
+    for: "cartoons"
+  },
+
+  pony: {
+    file: "pony",
+    type: "video",
+    for: "cartoons"
+  },
+
+  trapdoor: {
+    file: "trapdoor",
+    type: "video",
+    for: "cartoons"
+  }
+
+};
+
+var library2 = {
+
     // video & dom
 
-    // name set after folder
+    // file set after folder
 
-    // name video clip or function
+    // file video clip or function
 
     // group in eights?
 
@@ -132,4 +376,4 @@ var library = {
   
 }
 
-//fireman sam - jason & wheeled warriors - jamie magic torch - fraggle rock - ulessys - poddingto peas - thunderbirds - captain planets - gummi bears
+// fireman sam - jason & wheeled warriors - jamie magic torch - fraggle rock - ulessys - poddingto peas - thunderbirds - captain planets - gummi bears

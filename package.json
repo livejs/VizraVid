@@ -8,7 +8,7 @@
     "type": "git"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "vizra": "nodemon server.js",
     "build-css": "node-sass --output-style compressed -o public/styles src",
     "watch-sass": "nodemon -e scss -x \"npm run build-css\""
   },
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "node-sass": "^3.10.1",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "webpack": "^3.5.5"
   }
 }
