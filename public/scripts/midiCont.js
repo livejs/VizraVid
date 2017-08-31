@@ -2,6 +2,109 @@
 // akaiControls.PAD.pad1.onPress[0]
 // akaiControls.progChng.pad1[0]
 
+// setup quneo structure
+var quneo = {
+  mainSlider: [176,0],
+  pads: [
+    [],[],[],[]
+  ],
+  arrows: [
+    {
+      left: {
+        onPress: [144,11,127],
+        onRelease: [128,11,0]
+      },
+      right: {
+        onPress: [144,12,127],
+        onRelease: [128,12,0]
+      }
+    },
+    {
+      left: {
+        onPress: [144,13,127],
+        onRelease: [128,13,0]
+      },
+      right: {
+        onPress: [144,14,127],
+        onRelease: [128,14,0]
+      }
+    },
+    {
+      left: {
+        onPress: [144,15,127],
+        onRelease: [128,15,0]
+      },
+      right: {
+        onPress: [144,16,127],
+        onRelease: [128,16,0]
+      }
+    },
+    {
+      left: {
+        onPress: [144,17,127],
+        onRelease: [128,17,0]
+      },
+      right: {
+        onPress: [144,18,127],
+        onRelease: [128,18,0]
+      }
+    }
+  ],
+  horSliders: [
+    [177,1],
+    [177,2],
+    [177,3],
+    [177,4]
+  ],
+  vertSliders: {
+    bankOne: [
+      [177,5],
+      [177,6],
+      [177,7],
+      [177,8]
+    ],
+    bankTwo: [
+      [178,5],
+      [178,6],
+      [178,7],
+      [178,8]
+    ],
+    bankThree: [
+      [179,5],
+      [179,6],
+      [179,7],
+      [179,8]
+    ],
+    bankFour: [
+      [180,5],
+      [180,6],
+      [180,7],
+      [180,8]
+    ]
+  }
+};
+
+// generate pad values
+function generatePadVals() {
+
+  // 145 146, 0-63, 127
+  // 129 130, 0-63, 0
+
+  for (i=0; i<4; i++) {
+
+    for (j=0; j<64; j++) {
+      var toPush = {
+        onPress: [145+i,j,127],
+        onRelease: [129+i,j,0]
+      };
+      quneo.pads[i].push(toPush);
+    }
+
+  }
+}
+generatePadVals();
+
+
 var minim = {
   side: [
     {

@@ -1,10 +1,290 @@
 var library = {
 
+  islCell : {
+    file: "island/cell.mp4",
+    type: "video",
+    for: "island"
+  },
+
+  habClips : {
+    file: "island/habClips.mp4",
+    type: "video",
+    for: "island"
+  },
+
+  islShowcase: {
+    file: "island/showcase.mp4",
+    type: "video",
+    for: "island"
+  },
+
+  peluzah: {
+    file: "island/peluzah.mp4",
+    type: "video",
+    for: "island"
+  },
+
+  islandProm: {
+    file: "island/island.mp4",
+    type: "video",
+    for: "island"
+  },
+
+  islCellar: {
+    file: "island/cellar.mp4",
+    type: "video",
+    for: "island"
+  },
+
+  habitus: {
+    file: "island/habitus.mp4",
+    type: "video",
+    for: "island"
+  },
+
+  dusty: {
+    file: "island/dusty.mp4",
+    type: "video",
+    for: "island"
+  },
+
+  pong: {
+    file: "games/pong.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  chuckie: {
+    file: "games/chuckie.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  pacman: {
+    file: "games/pacman.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  spaceInv: {
+    file: "games/spaceinv.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  breakout: {
+    file: "games/breakout.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  donkey: {
+    file: "games/donkey.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  tetris: {
+    file: "games/tetris.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  xenon: {
+    file: "games/xenon.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  absRocket: {
+    file: "abstract/rockets01.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  absSpace: {
+    file: "abstract/space01.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  absSquare: {
+    file: "abstract/squares01.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  absDots: {
+    file: "abstract/dots07.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  absLines: {
+    file: "abstract/lines01.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  absDots2: {
+    file: "abstract/dots02.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  absDots3: {
+    file: "abstract/dots06.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  absHex: {
+    file: "abstract/hexagons01.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  thundercats: {
+    file: "cartoons/thundercats01.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  heman: {
+    file: "cartoons/heman.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  shera: {
+    file: "cartoons/shera.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  defenders: {
+    file: "cartoons/defenders.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  bucky: {
+    file: "cartoons/bucky.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  battle: {
+    file: "cartoons/battle.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  teenage: {
+    file: "cartoons/teenage.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  dungeons: {
+    file: "cartoons/dungeons.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  dangermouse: {
+    file: "cartoons/dangermouse.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  mysterious: {
+    file: "cartoons/mysterious.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  bananaman: {
+    file: "cartoons/bananaman.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  superted: {
+    file: "cartoons/superted.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  powerpuff: {
+    file: "cartoons/powerpuff.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  pokemon: {
+    file: "cartoons/pokemon.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  pony: {
+    file: "cartoons/pony.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  trapdoor: {
+    file: "cartoons/trapdoor.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  pooh: {
+    file: "anim/pooh.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  sleepBeu: {
+    file: "anim/sleeping.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  matrix: {
+    file: "anim/matrix.mp4",
+    type: "video",
+    for: "films"
+  },
+
+  topgun: {
+    file: "films/topgun.mp4",
+    type: "video",
+    for: "films"
+  },
+
+  mill: {
+    file: "tv/million.mp4",
+    type: "video",
+    for: "tv"
+  },
+
+  startrek: {
+    file: "tv/startrek.mp4",
+    type: "video",
+    for: "tv"
+  }
+
+};
+
+var library2 = {
+
     // video & dom
 
-    // name set after folder
+    // file set after folder
 
-    // name video clip or function
+    // file video clip or function
 
     // group in eights?
 
@@ -132,4 +412,4 @@ var library = {
   
 }
 
-//fireman sam - jason & wheeled warriors - jamie magic torch - fraggle rock - ulessys - poddingto peas - thunderbirds - captain planets - gummi bears
+// fireman sam - jason & wheeled warriors - jamie magic torch - fraggle rock - ulessys - poddingto peas - thunderbirds - captain planets - gummi bears

@@ -22,6 +22,7 @@ const blackEl = document.getElementById('black'),
 
 var set = sets[0],
   screenNo = 1,
+  libraryTrack = library['thundercats'],
   threshold = 100;
 
 var screenDomFunc = [diagonalCircles, dots];
