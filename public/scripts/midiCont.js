@@ -2,6 +2,54 @@
 // akaiControls.PAD.pad1.onPress[0]
 // akaiControls.progChng.pad1[0]
 
+// setup quneo structure
+var quneo = {
+  padsL: [
+    [],[],[],[]
+  ],
+  padsR: [
+    [],[],[],[]
+  ],
+  padsBankSwitch: {
+    up: [],
+    down: []
+  },
+  arrows: [],
+  horSliders: [],
+  vertSliders: [],
+  vertBankSwitch: {
+    up: [],
+    down: []
+  }
+};
+
+// generate pad values
+for (i=0; i<8; i++) {
+
+  for (j=1; j<33; j++) {
+    var toPush = {
+      onPress: [144+i,j,127],
+      onRelease: [128,j,0]
+    };
+
+    if (i%2 === 0) {
+      // 0,2,4,6 = 0,1,2,3
+      quneo.padsL[i/2].push(toPush);
+    } else {
+      // 1,3,5,7 = 0,1,2,3
+      quneo.padsR[(i-1)/2].push(toPush);
+    }
+  }
+}
+
+// generate vert slider values
+
+// generate horizontal slider values
+
+
+
+console.log(quneo);
+
 var minim = {
   side: [
     {
