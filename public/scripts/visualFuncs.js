@@ -50,7 +50,6 @@ function reqAnim() {
   var mixData = adjustFreqData(12);
 
   if ( (d3.quantile(mixData, 0.75)) > 110 ) {
-    console.log(d3.quantile(mixData, 0.75)); 
     videoEls[0].style.filter = 'invert(100%)';
     videoEls[1].style.filter = 'invert(100%)';
     svgEls[0].style.backgroundColor = 'white';

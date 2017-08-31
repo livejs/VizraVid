@@ -1,243 +1,279 @@
 var library = {
 
   islCell : {
-    file: "cell",
+    file: "island/cell.mp4",
     type: "video",
     for: "island"
   },
 
   habClips : {
-    file: "habClips",
+    file: "island/habClips.mp4",
     type: "video",
     for: "island"
   },
 
   islShowcase: {
-    file: "showcase",
+    file: "island/showcase.mp4",
     type: "video",
     for: "island"
   },
 
   peluzah: {
-    file: "peluzah",
+    file: "island/peluzah.mp4",
     type: "video",
     for: "island"
   },
 
   islandProm: {
-    file: "island",
+    file: "island/island.mp4",
     type: "video",
     for: "island"
   },
 
   islCellar: {
-    file: "cellar",
+    file: "island/cellar.mp4",
     type: "video",
     for: "island"
   },
 
   habitus: {
-    file: "habitus",
+    file: "island/habitus.mp4",
     type: "video",
     for: "island"
   },
 
   dusty: {
-    file: "dusty",
+    file: "island/dusty.mp4",
     type: "video",
     for: "island"
   },
 
   pong: {
-    file: "pong",
+    file: "games/pong.mp4",
     type: "video",
     for: "games"
   },
 
   chuckie: {
-    file: "chuckie",
+    file: "games/chuckie.mp4",
     type: "video",
     for: "games"
   },
 
   pacman: {
-    file: "pacman",
+    file: "games/pacman.mp4",
     type: "video",
     for: "games"
   },
 
   spaceInv: {
-    file: "spaceinv",
+    file: "games/spaceinv.mp4",
     type: "video",
     for: "games"
   },
 
   breakout: {
-    file: "breakout",
+    file: "games/breakout.mp4",
     type: "video",
     for: "games"
   },
 
   donkey: {
-    file: "donkey",
+    file: "games/donkey.mp4",
     type: "video",
     for: "games"
   },
 
   tetris: {
-    file: "tetris",
+    file: "games/tetris.mp4",
     type: "video",
     for: "games"
   },
 
   xenon: {
-    file: "xenon",
+    file: "games/xenon.mp4",
     type: "video",
     for: "games"
   },
 
   absRocket: {
-    file: "rockets01",
+    file: "abstract/rockets01.mp4",
     type: "video",
     for: "abstract"
   },
 
   absSpace: {
-    file: "space01",
+    file: "abstract/space01.mp4",
     type: "video",
     for: "abstract"
   },
 
   absSquare: {
-    file: "squares01",
+    file: "abstract/squares01.mp4",
     type: "video",
     for: "abstract"
   },
 
   absDots: {
-    file: "dots07",
+    file: "abstract/dots07.mp4",
     type: "video",
     for: "abstract"
   },
 
   absLines: {
-    file: "lines01",
+    file: "abstract/lines01.mp4",
     type: "video",
     for: "abstract"
   },
 
   absDots2: {
-    file: "dots02",
+    file: "abstract/dots02.mp4",
     type: "video",
     for: "abstract"
   },
 
   absDots3: {
-    file: "dots06",
+    file: "abstract/dots06.mp4",
     type: "video",
     for: "abstract"
   },
 
   absHex: {
-    file: "hexagons01",
+    file: "abstract/hexagons01.mp4",
     type: "video",
     for: "abstract"
   },
 
   thundercats: {
-    file: "thundercats01",
+    file: "cartoons/thundercats01.mp4",
     type: "video",
     for: "cartoons"
   },
 
   heman: {
-    file: "heman",
+    file: "cartoons/heman.mp4",
     type: "video",
     for: "cartoons"
   },
 
   shera: {
-    file: "shera",
+    file: "cartoons/shera.mp4",
     type: "video",
     for: "cartoons"
   },
 
   defenders: {
-    file: "defenders",
+    file: "cartoons/defenders.mp4",
     type: "video",
     for: "cartoons"
   },
 
   bucky: {
-    file: "bucky",
+    file: "cartoons/bucky.mp4",
     type: "video",
     for: "cartoons"
   },
 
   battle: {
-    file: "battle",
+    file: "cartoons/battle.mp4",
     type: "video",
     for: "cartoons"
   },
 
   teenage: {
-    file: "teenage",
+    file: "cartoons/teenage.mp4",
     type: "video",
     for: "cartoons"
   },
 
   dungeons: {
-    file: "dungeons",
+    file: "cartoons/dungeons.mp4",
     type: "video",
     for: "cartoons"
   },
 
   dangermouse: {
-    file: "dangermouse",
+    file: "cartoons/dangermouse.mp4",
     type: "video",
     for: "cartoons"
   },
 
   mysterious: {
-    file: "mysterious",
+    file: "cartoons/mysterious.mp4",
     type: "video",
     for: "cartoons"
   },
 
   bananaman: {
-    file: "bananaman",
+    file: "cartoons/bananaman.mp4",
     type: "video",
     for: "cartoons"
   },
 
   superted: {
-    file: "superted",
+    file: "cartoons/superted.mp4",
     type: "video",
     for: "cartoons"
   },
 
   powerpuff: {
-    file: "powerpuff",
+    file: "cartoons/powerpuff.mp4",
     type: "video",
     for: "cartoons"
   },
 
   pokemon: {
-    file: "pokemon",
+    file: "cartoons/pokemon.mp4",
     type: "video",
     for: "cartoons"
   },
 
   pony: {
-    file: "pony",
+    file: "cartoons/pony.mp4",
     type: "video",
     for: "cartoons"
   },
 
   trapdoor: {
-    file: "trapdoor",
+    file: "cartoons/trapdoor.mp4",
     type: "video",
     for: "cartoons"
+  },
+
+  pooh: {
+    file: "anim/pooh.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  sleepBeu: {
+    file: "anim/sleeping.mp4",
+    type: "video",
+    for: "cartoons"
+  },
+
+  matrix: {
+    file: "anim/matrix.mp4",
+    type: "video",
+    for: "films"
+  },
+
+  topgun: {
+    file: "films/topgun.mp4",
+    type: "video",
+    for: "films"
+  },
+
+  mill: {
+    file: "tv/million.mp4",
+    type: "video",
+    for: "tv"
+  },
+
+  startrek: {
+    file: "tv/startrek.mp4",
+    type: "video",
+    for: "tv"
   }
 
 };

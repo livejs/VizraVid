@@ -1,36 +1,56 @@
 
 function onMIDIMessage(message) {
     data = message.data;
-    // console.log('MIDI data', data);
+    console.log('MIDI data', data);
 
     // Threshold for mixing - this show/hides screens
-    if ( (data[0] === minim.cross[0]) && (data[1] === minim.cross[1]) ) {
+    if ( (data[0] === quneo.mainSlider[0]) && (data[1] === quneo.mainSlider[1]) ) {
       var bezierVal = data[2]/127;
       threshold = ( easing(bezierVal) )*240
       // console.log('midi:'+data[2]+'bezier:'+bezierVal+'threshold:'+threshold);
       console.log(data[2],bezierVal,threshold);
     }
 
-    // if side buttons are pressed show set
-    for (i=0; i<8; i++) {
-      
-      if ( (data[0] === minim.side[i].onPress[0]) && data[1] === minim.side[i].onPress[1] ) {
-          set = sets[i];
-          console.log("set "+set.name);
-      }
+    // new control
 
-      if ( (data[0] === minim.pads[i].onPress[0]) && data[1] === minim.pads[i].onPress[1] ) {
+    // pad is pressed
+    for (i=0; i<4; i++) {
+
+      // if pad is pressed
+      if ( (data[0] === quneo.pads[i][data[1]].onPress[0]) && (data[1] === quneo.pads[i][data[1]].onPress[1]) ) {
+
+        set = sets[i];
+        console.log("set "+set.name);
+        var libraryName = '';
+        var libraryItemNo = data[i];
+
+        if (data[1]>31) {
+
+          screenNo = 1;
+          console.log("screen: "+screenNo);
+          libraryItemNo = data[1]-32;
+
+        } else {
+
+          screenNo = 0;
+          console.log("screen: "+screenNo);
+
+        }
+
+        libraryName = set.tracks[libraryItemNo];
+
+        libraryTrack = library[libraryName];
+        console.log('track: '+libraryTrack);
 
         // load correct set stuff
-        if (set.type === 'video') {
+        if (libraryTrack.type === 'video') {
 
-          console.log(library);
-          changeVidSrc(videoEls[screenNo], 'library/'+set.name+'/'+library.video[set.name][i]+'.mp4');
+          changeVidSrc(videoEls[screenNo], 'library/'+libraryTrack.file);
 
           showVideo(vidScreens[screenNo], domScreens[screenNo]);
 
           //set.name
-        } else if (set.type === 'dom') {
+        } else if (libraryItem.type === 'dom') {
 
           if (library.dom[set.name][i]) {
             var svg = d3.select(svgEls[screenNo]);
@@ -42,9 +62,10 @@ function onMIDIMessage(message) {
           
         }
 
-      }
+      }// if pad
 
     }// for
+
 
 
     // effects
