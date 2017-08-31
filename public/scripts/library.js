@@ -274,142 +274,148 @@ var library = {
     file: "tv/startrek.mp4",
     type: "video",
     for: "tv"
+  },
+
+  ctx2DcentreCirc1: {
+    function: "centreCirc1",
+    type: "dom",
+    for: "circles"
   }
 
 };
 
-var library2 = {
+// var library2 = {
 
-    // video & dom
+//     // video & dom
 
-    // file set after folder
+//     // file set after folder
 
-    // file video clip or function
+//     // file video clip or function
 
-    // group in eights?
+//     // group in eights?
 
-  video: {
+//   video: {
 
-    island:
-    [
-      "cell",
-      "habClips",
-      "showcase",
-      "peluzah",
-      "island",
-      "cellar",
-      "habitus",
-      "dusty"
+//     island:
+//     [
+//       "cell",
+//       "habClips",
+//       "showcase",
+//       "peluzah",
+//       "island",
+//       "cellar",
+//       "habitus",
+//       "dusty"
       
-    ],
+//     ],
 
-    games:
-    [
-      "pong",
-      "chuckie",
-      "pacman",
-      "spaceinv",
+//     games:
+//     [
+//       "pong",
+//       "chuckie",
+//       "pacman",
+//       "spaceinv",
       
-      "breakout",
-      "donkey",
-      "tetris",
-      "xenon"
-    ],
+//       "breakout",
+//       "donkey",
+//       "tetris",
+//       "xenon"
+//     ],
 
-    abstract:
-    [
-      "rockets01",
-      "space01",
-      "squares01",
-      "dots07",
+//     abstract:
+//     [
+//       "rockets01",
+//       "space01",
+//       "squares01",
+//       "dots07",
 
-      "lines01",
-      "dots02",
-      "dots06",
-      "hexagons01"
-    ],
+//       "lines01",
+//       "dots02",
+//       "dots06",
+//       "hexagons01"
+//     ],
 
-    cartoons1:
-    [
-      "thundercats01",
-      "heman",
-      "shera",
-      "defenders",
+//     cartoons1:
+//     [
+//       "thundercats01",
+//       "heman",
+//       "shera",
+//       "defenders",
 
-      "bucky",
-      "battle",
-      "teenage",
-      "dungeons",
-    ],
+//       "bucky",
+//       "battle",
+//       "teenage",
+//       "dungeons",
+//     ],
 
-    cartoons2: 
-    [
-      "dangermouse",
-      "bananaman",
-      "mysterious",
-      "superted",
+//     cartoons2: 
+//     [
+//       "dangermouse",
+//       "bananaman",
+//       "mysterious",
+//       "superted",
 
-      "powerpuff",
-      "pokemon",
-      "pony",
-      "trapdoor"
-    ]
-  },
+//       "powerpuff",
+//       "pokemon",
+//       "pony",
+//       "trapdoor"
+//     ]
+//   },
 
-  dom: {
+//   dom: {
 
-    jsConf: [
-      jsConfLogo10,
-      jsConfLogo20,
-      jsConfShapes13,
-      jsConfShapes14,
-      jsConfShapes15
-    ],
+//     jsConf: [
+//       jsConfLogo10,
+//       jsConfLogo20,
+//       jsConfShapes13,
+//       jsConfShapes14,
+//       jsConfShapes15
+//     ],
 
-    centStripes: [
-      concentric,
-      concentric2,
-      shell,
-      superChart,
-      superSun,
-      spectrum,
-      superChart,
-      stripes
-    ],
+//     centStripes: [
+//       concentric,
+//       concentric2,
+//       shell,
+//       superChart,
+//       superSun,
+//       spectrum,
+//       superChart,
+//       stripes
+//     ],
 
-    diagCirc: [
-      dots,
-      dots2,
-      diagonalCircles,
-      diagCircLine,
+//     diagCirc: [
+//       dots,
+//       dots2,
+//       diagonalCircles,
+//       diagCircLine,
       
-      triangles,
-      triangles2,
-      diagonalCircles,
-      diagCircLine
-    ]
+//       triangles,
+//       triangles2,
+//       diagonalCircles,
+//       diagCircLine
+//     ]
 
-  }
+//   }
 
 
-// "circular01",
-// "hexagons01", -
-// "dots01",
-// "rockets01", -
-// "circular02",
-// "dots04",
-// "circular03",
-// "space01", -
-// "circular06",
-// "dots02", -
-// "dots07", -
-// "lines01", -
-// "dots06", -
-// "snakes01",
-// "dots03",
-// "squares01" -
+// // "circular01",
+// // "hexagons01", -
+// // "dots01",
+// // "rockets01", -
+// // "circular02",
+// // "dots04",
+// // "circular03",
+// // "space01", -
+// // "circular06",
+// // "dots02", -
+// // "dots07", -
+// // "lines01", -
+// // "dots06", -
+// // "snakes01",
+// // "dots03",
+// // "squares01" -
 
   
-}
+// }
 
 // fireman sam - jason & wheeled warriors - jamie magic torch - fraggle rock - ulessys - poddingto peas - thunderbirds - captain planets - gummi bears

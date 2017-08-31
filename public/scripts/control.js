@@ -53,11 +53,16 @@ function onMIDIMessage(message) {
         } else if (libraryItem.type === 'dom') {
 
           if (library.dom[set.name][i]) {
-            var svg = d3.select(svgEls[screenNo]);
-            svg.selectAll('*').remove();
-            showCss(vidScreens[screenNo], domScreens[screenNo]);
-            screenDomFunc[screenNo] = library.dom[set.name][i];
+
+            ctxs[screenNo].clearRect(0,0,screen.width,screen.height);
+            showDom(vidScreens[screenNo], domScreens[screenNo]);
+            screenDomFunc[screenNo] = libraryTrack.function;
             reqAnim();  
+
+
+            // var svg = d3.select(svgEls[screenNo]);
+            // svg.selectAll('*').remove();
+            
           }
           
         }
