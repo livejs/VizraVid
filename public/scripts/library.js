@@ -280,6 +280,116 @@ var library = {
     function: "centreCirc1",
     type: "dom",
     for: "circles"
+  },
+
+  ljsBigHeart: {
+    function: "ljsBigHeart",
+    type: "dom",
+    for: "livejs"
+  },
+
+  ljsLilHeart: {
+    function: "ljsBigHeart",
+    type: "dom",
+    for: "livejs"
+  },
+
+  ljsBacks: {
+    file: "livejs/ljsbacks.mp4",
+    type: "video",
+    for: "livejs"
+  },
+
+  ljsLogos: {
+    file: "livejs/ljslogos.mp4",
+    type: "video",
+    for: "livejs"
+  },
+
+  ljsTitle: {
+    file: "livejs/ljstitle.mp4",
+    type: "video",
+    for: "livejs"
+  },
+
+  circJelly: {
+    file: "abstract/jelly.mp4",
+    type: "video",
+    for: "circles"
+  },
+
+  circKoll: {
+    file: "abstract/koll.mp4",
+    type: "video",
+    for: "circles"
+  },
+
+  circMocirc: {
+    file: "abstract/mocircshii.mp4",
+    type: "video",
+    for: "circles"
+  },
+
+  circOutb: {
+    file: "abstract/out-b.mp4",
+    type: "video",
+    for: "circles"
+  },
+
+  circPoxels: {
+    file: "abstract/poxels.mp4",
+    type: "video",
+    for: "circles"
+  },
+
+  circShifting: {
+    file: "abstract/shiftingPains.mp4",
+    type: "video",
+    for: "circles"
+  },
+
+  circSignal: {
+    file: "abstract/signalBarrel.mp4",
+    type: "video",
+    for: "circles"
+  },
+
+  cfBackVid: {
+    file: "confs/ccbackground.mp4",
+    type: "video",
+    for: "coldfront"
+  },
+
+  cfSpeakers: {
+    file: "confs/ccspeakers.mp4",
+    type: "video",
+    for: "coldfront"
+  },
+
+  cfTitle: {
+    file: "confs/cctitle.mp4",
+    type: "video",
+    for: "coldfront"
+  },
+
+  cfStars: {
+    function: "cfStars",
+    type: "dom",
+    for: "coldfront"
+  },
+
+  cfBk: {
+    function: "cfBk",
+    type: "dom",
+    for: "coldfront"
+  },
+
+
+
+  name: {
+    function: "name",
+    type: "dom",
+    for: "circles"
   }
 
 };

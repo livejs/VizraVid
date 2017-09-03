@@ -25,6 +25,8 @@ const blackEl = document.getElementById('black'),
 var ctxs = [];
 function createContexts() {
   for (let i=0; i<canvasEls.length; i++) {
+    canvasEls[i].width = screen.width;
+    canvasEls[i].height = screen.height;
     var ctx = canvasEls[i].getContext('2d');
     ctxs.push(ctx);
   }

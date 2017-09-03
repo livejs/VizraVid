@@ -59,11 +59,14 @@ body {
   filter: contrast(120%) brightness(120%);
 }
 
-svg, canvas {
+svg {
   width: 100vw;
   height: 100vh;
   padding: 0px;
-  margin: 0px;}
+  margin: 0px;
+}
+
+canvas {padding:0px; margin:0px;}
 
 /*black & white covers for fading in and out*/
 #black, #white {
