@@ -6,10 +6,12 @@ var sets = [
     name: 'coldFront',
     tracks: [
       'cfTitle','cfSpeakers','cfBackVid','',
-      'cfStars', 'cfBack', '', '',
+      // 'cfStars', 'cfBack', '', '',
+      '', '', '', '',
 
-      'ljsTitle','ljsLogos','ljsBack','',
-      'ljsLilHeart','ljsBigHeart','','',
+      'ljsTitle','ljsLogos','ljsBacks','',
+      // 'ljsLilHeart','ljsBigHeart','','',
+      '','','','',
 
       'pooh','sleepBeu','matrix','topgun',
       'mill','startrek','','',

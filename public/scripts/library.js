@@ -282,6 +282,12 @@ var library = {
     for: "circles"
   },
 
+  ctx2DcentreCirc2: {
+    function: "centreCirc2",
+    type: "dom",
+    for: "circles"
+  },
+
   ljsBigHeart: {
     function: "ljsBigHeart",
     type: "dom",

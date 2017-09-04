@@ -22,7 +22,7 @@ function onMIDIMessage(message) {
         set = sets[i];
         console.log("set "+set.name);
         var libraryName = '';
-        var libraryItemNo = data[i];
+        var libraryItemNo = data[1];
 
         if (data[1]>31) {
 
@@ -43,29 +43,34 @@ function onMIDIMessage(message) {
         console.log('track: '+libraryTrack);
 
         // load correct set stuff
-        if (libraryTrack.type === 'video') {
+        if (libraryTrack.name !== '') {
+          if (libraryTrack.type === 'video') {
 
-          changeVidSrc(videoEls[screenNo], 'library/'+libraryTrack.file);
+            changeVidSrc(videoEls[screenNo], 'library/'+libraryTrack.file);
 
-          showVideo(vidScreens[screenNo], domScreens[screenNo]);
+            showVideo(vidScreens[screenNo], domScreens[screenNo]);
 
-          //set.name
-        } else if (libraryItem.type === 'dom') {
+            screenDomFunc[screenNo] = clearRect;
+            reqAnim();
 
-          if (library.dom[set.name][i]) {
+            //set.name
+          } else if (libraryItem.type === 'dom') {
 
-            ctxs[screenNo].clearRect(0,0,screen.width,screen.height);
-            showDom(vidScreens[screenNo], domScreens[screenNo]);
-            screenDomFunc[screenNo] = libraryTrack.function;
-            reqAnim();  
+            if (library.dom[set.name][i]) {
+
+              ctxs[screenNo].clearRect(0,0,screen.width,screen.height);
+              showDom(vidScreens[screenNo], domScreens[screenNo]);
+              screenDomFunc[screenNo] = libraryTrack.function;
+              reqAnim();  
 
 
-            // var svg = d3.select(svgEls[screenNo]);
-            // svg.selectAll('*').remove();
-            
-          }
+              // var svg = d3.select(svgEls[screenNo]);
+              // svg.selectAll('*').remove();
+              
+            }
           
-        }
+          }
+        }// not '' track
 
       }// if pad
 

@@ -77,6 +77,10 @@ Math.radians = function(degrees) {
   return degrees * Math.PI / 180;
 };
 
+function clearRect(ctx) {
+  ctxs[ctx].clearRect(0,0,screen.width,screen.height);
+}
+
 function centreCirc1(ctx) {
   ctxs[ctx].fillStyle = "#000";
   ctxs[ctx].fillRect(0,0,screen.width,screen.height);
