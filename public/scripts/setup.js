@@ -12,12 +12,28 @@ const blackEl = document.getElementById('black'),
   domScreens = document.getElementsByClassName('dom'),
   videoEls = document.getElementsByTagName('video'),
   svgEls = document.getElementsByTagName('svg'),
+  canvasEls = document.getElementsByTagName('canvas'),
   screen = {
     width: window.innerWidth,
     height: window.innerHeight,
+    centerX: window.innerWidth/2,
+    centerY: window.innerHeight/2,
     maxRadius: (window.innerHeight-(window.innerWidth/6))/2,
     minRadius: (window.innerHeight/10)/2
   };
+
+var ctxs = [];
+function createContexts() {
+  for (let i=0; i<canvasEls.length; i++) {
+    canvasEls[i].width = screen.width;
+    canvasEls[i].height = screen.height;
+    var ctx = canvasEls[i].getContext('2d');
+    ctxs.push(ctx);
+  }
+}
+createContexts();
+
+var currentEls = [canvasEls[0], canvasEls[1]];
 
 
 var set = sets[0],
@@ -25,7 +41,7 @@ var set = sets[0],
   libraryTrack = library['thundercats'],
   threshold = 100;
 
-var screenDomFunc = [diagonalCircles, dots];
+var screenDomFunc = [centreCirc1, centreCirc2];
 
 const easing = BezierEasing(0.01, 0.8, 0.8, 0.01);
 const audioApi = new window.AudioContext;
@@ -42,7 +58,7 @@ function adjustFreqData(shapeNo) {
   analyserNode.getByteFrequencyData(frequencyData);
   var removed = frequencyData.slice(0,1024);
   
-  var newFreqs = [], prevRangeStart = 0, prevItemCount = 0;
+  var newFreqs = [], lowFreqs, midFreqs, highFreqs, prevRangeStart = 0, prevItemCount = 0;
 
   // set up the maxPow & thus ratio based on shapeCount
   var maxPow = Math.pow(2,shapeNo/2);
@@ -71,8 +87,30 @@ function adjustFreqData(shapeNo) {
     prevItemCount = itemCount;
     prevRangeStart = rangeStart;
   }
+
+  var oneThird = Math.floor(shapeNo/3);
+
+  function avFreqs(arrPart) {
+    var arrPart = arrPart;
+    var avValue;
+    var totalVal = 0;
+    for (let l=0; l<arrPart.length; l++) {
+      totalVal += arrPart[l];
+    }
+    avValue = Math.floor(totalVal/arrPart.length);
+    return avValue;
+  }
+
+  lowFreqs = avFreqs(newFreqs.slice(0,oneThird));
+  midFreqs = avFreqs(newFreqs.slice(oneThird, oneThird*2));
+  highFreqs = avFreqs(newFreqs.slice(oneThird*2));
   
-  return newFreqs;
+  return {
+    newFreqs: newFreqs,
+    lowFreqs: lowFreqs,
+    midFreqs: midFreqs,
+    highFreqs: highFreqs
+  };
 }
 
 // create an audio API analyser node and connect to source

@@ -5,81 +5,111 @@
 // setup quneo structure
 var quneo = {
   mainSlider: [176,0],
+  pause: {
+    onPress: [144,1,127],
+    onRelease: [128,1,0]
+  },
+  stop: {
+    onPress: [144,2,127],
+    onRelease: [128,2,0]
+  },
+  play: {
+    onPress: [144,3,127],
+    onRelease: [128,3,0]
+  },
   pads: [
     [],[],[],[]
   ],
   arrows: [
     {
       left: {
-        onPress: [144,11,127],
-        onRelease: [128,11,0]
+        onPress: [145,0,127],
+        onRelease: [129,0,0]
       },
       right: {
-        onPress: [144,12,127],
-        onRelease: [128,12,0]
+        onPress: [145,1,127],
+        onRelease: [129,1,0]
       }
     },
     {
       left: {
-        onPress: [144,13,127],
-        onRelease: [128,13,0]
+        onPress: [145,2,127],
+        onRelease: [129,2,0]
       },
       right: {
-        onPress: [144,14,127],
-        onRelease: [128,14,0]
+        onPress: [145,3,127],
+        onRelease: [129,3,0]
       }
     },
     {
       left: {
-        onPress: [144,15,127],
-        onRelease: [128,15,0]
+        onPress: [145,4,127],
+        onRelease: [129,4,0]
       },
       right: {
-        onPress: [144,16,127],
-        onRelease: [128,16,0]
+        onPress: [145,5,127],
+        onRelease: [129,5,0]
       }
     },
     {
       left: {
-        onPress: [144,17,127],
-        onRelease: [128,17,0]
+        onPress: [145,6,127],
+        onRelease: [129,6,0]
       },
       right: {
-        onPress: [144,18,127],
-        onRelease: [128,18,0]
+        onPress: [145,7,127],
+        onRelease: [129,7,0]
       }
     }
   ],
   horSliders: [
     [177,1],
-    [177,2],
-    [177,3],
-    [177,4]
+    [177,5],
+    [177,9],
+    [177,13]
   ],
+  rotaries: {
+    bankOne: {
+      left: [178,0],
+      right: [178,1]
+    },
+    bankTwo: {
+      left: [178,2],
+      right: [178,3]
+    },
+    bankThree: {
+      left: [178,4],
+      right: [178,5]
+    },
+    bankFour: {
+      left: [178,6],
+      right: [178,7]
+    },
+  },
   vertSliders: {
     bankOne: [
-      [177,5],
-      [177,6],
-      [177,7],
-      [177,8]
-    ],
-    bankTwo: [
-      [178,5],
-      [178,6],
-      [178,7],
-      [178,8]
-    ],
-    bankThree: [
       [179,5],
       [179,6],
       [179,7],
       [179,8]
     ],
-    bankFour: [
+    bankTwo: [
       [180,5],
       [180,6],
       [180,7],
       [180,8]
+    ],
+    bankThree: [
+      [181,5],
+      [181,6],
+      [181,7],
+      [181,8]
+    ],
+    bankFour: [
+      [182,5],
+      [182,6],
+      [182,7],
+      [182,8]
     ]
   }
 };
@@ -94,8 +124,8 @@ function generatePadVals() {
 
     for (j=0; j<64; j++) {
       var toPush = {
-        onPress: [145+i,j,127],
-        onRelease: [129+i,j,0]
+        onPress: [159-i,j,127],
+        onRelease: [143-i,j,0]
       };
       quneo.pads[i].push(toPush);
     }
