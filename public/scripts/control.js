@@ -80,6 +80,62 @@ function onMIDIMessage(message) {
 
     // effects
 
+    // bank one is filters
+    if ( data[0] === quneo.vertSliders.bankOne[0][0] ) {
+
+      // switch over filter types
+      let filterType = 'reset';
+
+      switch(data[1]) {
+        case quneo.vertSliders.bankOne[0][1]:
+          filterType = 'invert';
+          break;
+        case quneo.vertSliders.bankOne[1][1]:
+          filterType = 'grayscale';
+          break;
+        case quneo.vertSliders.bankOne[2][1]:
+          filterType = 'hue';
+          break;
+        case quneo.vertSliders.bankOne[3][1]:
+          filterType = 'blur';
+          break;
+        default:
+          filterType = 'reset';
+          break;
+      }
+
+      VizFX.filter(filterType, data[2]);
+
+    }
+
+    // bank two is transforms
+    if ( data[0] === quneo.vertSliders.bankTwo[0][0] ) {
+
+      // switch over filter types
+      let transformType = 'reset';
+
+      switch(data[1]) {
+        case quneo.vertSliders.bankTwo[0][1]:
+          transformType = 'zoom';
+          break;
+        case quneo.vertSliders.bankTwo[1][1]:
+          transformType = 'transX';
+          break;
+        case quneo.vertSliders.bankTwo[2][1]:
+          transformType = 'transY';
+          break;
+        case quneo.vertSliders.bankTwo[3][1]:
+          transformType = 'rotate';
+          break;
+        default:
+          transformType = 'reset';
+          break;
+      }
+
+      VizFX.transform(transformType, data[2]);
+
+    }
+
     // black on
     if ( (data[0] === quneo.arrows[0].left.onPress[0]) && (data[1] === quneo.arrows[0].left.onPress[1]) ) {
 

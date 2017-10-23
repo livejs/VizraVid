@@ -1,4 +1,4 @@
-var VizFX = function(canvasEl) {
+var VizFX = (function() {
 
   let vizFXMethods = {};
 
@@ -8,6 +8,7 @@ var VizFX = function(canvasEl) {
   vizFXMethods.filter = function(filter, amount) {
     switch (filter) {
       case 'invert':
+        console.log('inverting');
         document.documentElement.style.setProperty("--invert", amount+'%');
         break;
       case 'grayscale':
@@ -46,8 +47,8 @@ var VizFX = function(canvasEl) {
         break;
       default:
         document.documentElement.style.setProperty("--zoom", 1);
-        document.documentElement.style.setProperty("--transX", '50vw');
-        document.documentElement.style.setProperty("--transY", '50vh');
+        document.documentElement.style.setProperty("--transX", '0vw');
+        document.documentElement.style.setProperty("--transY", '0vh');
         document.documentElement.style.setProperty("--rotate", '0turn');
         break;
     }
@@ -69,7 +70,7 @@ var VizFX = function(canvasEl) {
 
   return vizFXMethods;
 
-});
+})();
 
 
 
