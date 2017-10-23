@@ -1,0 +1,30 @@
+:root {
+  --invert: 0%;
+  --grayscale: 0%;
+  --hue: 0deg;
+  --blur: 0px;
+
+  --zoom: 1;
+  --transX: 50vw;
+  --transY: 50vh;
+  --rotate: 0turn;
+
+  --whiteFade: 0;
+  --blackFade: 0;
+}
+
+.video video {
+  filter: contrast(120%) brightness(120%) invert(var(--invert)) grayscale(var(--grayscale)) hue-rotate(var(--hue)) blur(var(--blur));
+  transform: scale(var(--zoom)) translateX(var(--transX)) translateY(var(--transY)) rotate(var(--rotate));
+}
+
+.dom canvas {
+  filter: invert(var(--invert)) grayscale(var(--grayscale)) hue-rotate(var(--hue)) blur(var(--blur));
+  transform: scale(var(--zoom)) translateX(var(--transX)) translateY(var(--transY)) rotate(var(--rotate));
+}
+
+#black {opacity: var(--blackFade);}
+#white {opacity: var(--whiteFade);}
+
+
+

@@ -265,7 +265,7 @@ var library = {
   },
 
   mill: {
-    file: "tv/million.mp4",
+    file: "tv/milion.mp4",
     type: "video",
     for: "tv"
   },
@@ -277,13 +277,13 @@ var library = {
   },
 
   ctx2DcentreCirc1: {
-    function: "centreCirc1",
+    function: centreCirc1,
     type: "dom",
     for: "circles"
   },
 
   ctx2DcentreCirc2: {
-    function: "centreCirc2",
+    function: centreCirc2,
     type: "dom",
     for: "circles"
   },
@@ -376,6 +376,24 @@ var library = {
     file: "confs/cctitle.mp4",
     type: "video",
     for: "coldfront"
+  },
+
+  fourAll: {
+    file: "confs/404con.mp4",
+    type: "video",
+    for: "404conf"
+  },
+
+  fourInfo: {
+    file: "confs/404conInfo.mp4",
+    type: "video",
+    for: "404conf"
+  },
+
+  fourTitle: {
+    file: "confs/404conTitle.mp4",
+    type: "video",
+    for: "404conf"
   },
 
   cfStars: {

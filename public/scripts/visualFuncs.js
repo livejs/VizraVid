@@ -42,8 +42,8 @@ function reqAnim() {
   screenDomFunc[1](1);
   screenDomFunc[0](0);
 
-  var freqs = adjustFreqData(12);
-  var mixData = freqs.newFreqs;
+  // var freqs = adjustFreqData(12);
+  // var mixData = freqs.newFreqs;
 
   // if ( (d3.quantile(mixData, 0.75)) > 110 ) {
   //   videoEls[0].style.filter = 'invert(100%)';
@@ -57,19 +57,19 @@ function reqAnim() {
   //   svgEls[1].style.backgroundColor = 'transparent';
   // }
 
-  for (var i=0; i<12; i++) {
-    if (mixData[i] > threshold){
-      if (i<6) {
-        screens[1].style.opacity = '1';
-        screens[0].style.opacity = '0';
-        // screenDomFunc[1](1);
-      } else {
-        screens[1].style.opacity = '0';
-        screens[0].style.opacity = '1';
-        // screenDomFunc[0](0);
-      }
-    }
-  }
+  // for (var i=0; i<12; i++) {
+  //   if (mixData[i] > threshold){
+  //     if (i<6) {
+  //       screens[1].style.opacity = '1';
+  //       screens[0].style.opacity = '0';
+  //       // screenDomFunc[1](1);
+  //     } else {
+  //       screens[1].style.opacity = '0';
+  //       screens[0].style.opacity = '1';
+  //       // screenDomFunc[0](0);
+  //     }
+  //   }
+  // }
   
 }
 

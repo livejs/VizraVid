@@ -43,31 +43,31 @@ function onMIDIMessage(message) {
         console.log('track: '+libraryTrack);
 
         // load correct set stuff
-        if (libraryTrack.name !== '') {
+        if (libraryName !== '') {
           if (libraryTrack.type === 'video') {
 
             changeVidSrc(videoEls[screenNo], 'library/'+libraryTrack.file);
 
             showVideo(vidScreens[screenNo], domScreens[screenNo]);
 
+            currentEls[screenNo] = videoEls[screenNo];
             screenDomFunc[screenNo] = clearRect;
             reqAnim();
 
             //set.name
-          } else if (libraryItem.type === 'dom') {
+          } else if (libraryTrack.type === 'dom') {
 
-            if (library.dom[set.name][i]) {
 
               ctxs[screenNo].clearRect(0,0,screen.width,screen.height);
               showDom(vidScreens[screenNo], domScreens[screenNo]);
+              
+              currentEls[screenNo] = canvasEls[screenNo];
               screenDomFunc[screenNo] = libraryTrack.function;
               reqAnim();  
-
 
               // var svg = d3.select(svgEls[screenNo]);
               // svg.selectAll('*').remove();
               
-            }
           
           }
         }// not '' track
@@ -80,40 +80,58 @@ function onMIDIMessage(message) {
 
     // effects
 
-    // black
-    if ( (data[0] === minim.top[0].onPress[0]) && (data[1] === minim.top[0].onPress[1]) ) {
+    // black on
+    if ( (data[0] === quneo.arrows[0].left.onPress[0]) && (data[1] === quneo.arrows[0].left.onPress[1]) ) {
 
-      if ( data[2] === minim.top[0].onPress[2] ) {
-        blackEl.style.opacity = 1;
-      } else if ( data[2] === minim.top[0].onRelease[2] ) {
-        blackEl.style.opacity = 0;
-      }
-      
+      blackEl.style.opacity = 1;
+
+    // black off
+    } else if ( (data[0] === quneo.arrows[0].left.onRelease[0]) && (data[1] === quneo.arrows[0].left.onRelease[1]) ) {
+
+      blackEl.style.opacity = 0;
+
     }
 
-    // white
-    if ( (data[0] === minim.top[1].onPress[0]) && (data[1] === minim.top[1].onPress[1]) ) {
+    // white on
+    if ( (data[0] === quneo.arrows[0].right.onPress[0]) && (data[1] === quneo.arrows[0].right.onPress[1]) ) {
 
-      if ( data[2] === minim.top[1].onPress[2] ) {
-        whiteEl.style.opacity = 1;
-      } else if ( data[2] === minim.top[1].onRelease[2] ) {
-        whiteEl.style.opacity = 0;
-      }
-      
+      whiteEl.style.opacity = 1;
+
+    // white off
+    } else if ( (data[0] === quneo.arrows[0].right.onRelease[0]) && (data[1] === quneo.arrows[0].right.onRelease[1]) ) {
+
+      whiteEl.style.opacity = 0;
+
     }
 
-    // invert
-    if ( (data[0] === minim.top[2].onPress[0]) && (data[1] === minim.top[2].onPress[1]) ) {
+    // invert on
+    if ( (data[0] === quneo.arrows[1].left.onPress[0]) && (data[1] === quneo.arrows[1].left.onPress[1]) ) {
 
-      if ( data[2] === minim.top[2].onPress[2] ) {
-        videoEls[0].style.webkitFilter = "invert(100%)";
-        videoEls[1].style.webkitFilter = "invert(100%)";
-      } else if ( data[2] === minim.top[2].onRelease[2] ) {
-        videoEls[0].style.webkitFilter = "invert(0%)";
-        videoEls[1].style.webkitFilter = "invert(0%)";
+      for (i=0; i<currentEls.length; i++) {
+        currentEls[i].style.webkitFilter = "invert(100%)";
       }
-      
+
+    // invert off
+    } else if ( (data[0] === quneo.arrows[1].left.onRelease[0]) && (data[1] === quneo.arrows[1].left.onRelease[1]) ) {
+
+      for (i=0; i<currentEls.length; i++) {
+        currentEls[i].style.webkitFilter = "invert(0%)";
+      }
+
     }
+
+    // // invert
+    // if ( (data[0] === minim.top[2].onPress[0]) && (data[1] === minim.top[2].onPress[1]) ) {
+
+    //   if ( data[2] === minim.top[2].onPress[2] ) {
+    //     videoEls[0].style.webkitFilter = "invert(100%)";
+    //     videoEls[1].style.webkitFilter = "invert(100%)";
+    //   } else if ( data[2] === minim.top[2].onRelease[2] ) {
+    //     videoEls[0].style.webkitFilter = "invert(0%)";
+    //     videoEls[1].style.webkitFilter = "invert(0%)";
+    //   }
+      
+    // }
 
     // zoom
     if ( (data[0] === minim.top[3].onPress[0]) && (data[1] === minim.top[3].onPress[1]) ) {

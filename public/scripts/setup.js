@@ -33,6 +33,8 @@ function createContexts() {
 }
 createContexts();
 
+var currentEls = [canvasEls[0], canvasEls[1]];
+
 
 var set = sets[0],
   screenNo = 1,

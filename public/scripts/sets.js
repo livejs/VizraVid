@@ -5,7 +5,7 @@ var sets = [
   {
     name: 'coldFront',
     tracks: [
-      'cfTitle','cfSpeakers','cfBackVid','',
+      'fourAll','fourInfo','fourTitle','',
       // 'cfStars', 'cfBack', '', '',
       '', '', '', '',
 

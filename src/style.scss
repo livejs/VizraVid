@@ -56,7 +56,6 @@ body {
 .video {display:none;}
 .video video {
   width:100%; height:auto;
-  filter: contrast(120%) brightness(120%);
 }
 
 svg {
@@ -72,7 +71,6 @@ canvas {padding:0px; margin:0px;}
 #black, #white {
   height: 100vh; width:100%;
   position: absolute; top:0px; left:0px;
-  opacity: 0;
 }
 #black {background-color: black;}
 #white {background-color: white;}
