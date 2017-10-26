@@ -34,93 +34,208 @@ var showDom = function showDom(vidEl, domEl) {
   vidEl.style.display = "none"
 }
 
-
-// only call request animation frame on function you actually want to run
-function reqAnim() {
-  requestAnimationFrame(reqAnim);
-
-  screenDomFunc[1](1);
-  screenDomFunc[0](0);
-
-  // var freqs = adjustFreqData(12);
-  // var mixData = freqs.newFreqs;
-
-  // if ( (d3.quantile(mixData, 0.75)) > 110 ) {
-  //   videoEls[0].style.filter = 'invert(100%)';
-  //   videoEls[1].style.filter = 'invert(100%)';
-  //   svgEls[0].style.backgroundColor = 'white';
-  //   svgEls[1].style.backgroundColor = 'white';
-  // } else {
-  //   videoEls[0].style.filter = 'invert(0%) contrast(120%) brightness(120%)';
-  //   videoEls[1].style.filter = 'invert(0%) contrast(120%) brightness(120%)';
-  //   svgEls[0].style.backgroundColor = 'transparent';
-  //   svgEls[1].style.backgroundColor = 'transparent';
-  // }
-
-  // for (var i=0; i<12; i++) {
-  //   if (mixData[i] > threshold){
-  //     if (i<6) {
-  //       screens[1].style.opacity = '1';
-  //       screens[0].style.opacity = '0';
-  //       // screenDomFunc[1](1);
-  //     } else {
-  //       screens[1].style.opacity = '0';
-  //       screens[0].style.opacity = '1';
-  //       // screenDomFunc[0](0);
-  //     }
-  //   }
-  // }
-  
-}
-
+// some generic draw functions to be moved to library
 Math.radians = function(degrees) {
   return degrees * Math.PI / 180;
 };
+
+function drawHex(ctx, sideLength, startX, startY) {
+
+  // maths mother fucker
+  const moveX = Math.sin(Math.radians(30))*sideLength;
+  const moveY = Math.cos(Math.radians(30))*sideLength;
+
+  // I actually want the origin to be in the centre
+  var startX = startX-(sideLength/2);
+  var startY = startY-moveY;
+
+  ctx.beginPath(); // instigate
+  ctx.moveTo(startX, startY); // start at pos
+  ctx.lineTo(startX+sideLength, startY); // go right along top (we're drawing clockwise from top left)
+
+  ctx.lineTo(startX+sideLength+moveX, startY+moveY);
+  ctx.lineTo(startX+sideLength, startY+(moveY*2));
+  ctx.lineTo(startX, startY+(moveY*2));
+  ctx.lineTo(startX-moveX, startY+moveY);
+  ctx.lineTo(startX, startY);
+  ctx.closePath();
+}
 
 function clearRect(ctx) {
   ctxs[ctx].clearRect(0,0,screen.width,screen.height);
 }
 
-function centreCirc1(ctx) {
+//~~~~~~~~~~~~~~~~~~~~~~
+
+function centreCirc1(ctx, frequencies) {
   ctxs[ctx].fillStyle = "#000";
   ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 15;
 
-  var frequencies = adjustFreqData(32);
-  var newData = frequencies.newFreqs;
 
-  for(var i=0;i<newData.length;i++) {
-    var d = newData[i];
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
     var transparency = d/200;
 
-    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,"+transparency+")";
+    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*10 )+",50%,80%,"+transparency+")";
     // ctxs[ctx].fillStyle = "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,"+transparency+")";
-    ctxs[ctx].globalCompositeOperation = "hard-light";
     ctxs[ctx].beginPath();
-    ctxs[ctx].lineWidth = 15;
     ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, 0, Math.PI*2);
+    ctxs[ctx].closePath();
     ctxs[ctx].stroke();
+  }
+  
+}
 
+function centreCirc2(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 15;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+    var transparency = d/200;
+
+    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*30 )+",50%,80%,"+transparency+")";
+    ctxs[ctx].fillStyle = "hsla("+Math.round( i*30 )+",50%,80%,"+transparency+")";
+    ctxs[ctx].beginPath();
+    ctxs[ctx].arc(screen.centerX, screen.centerY, i*64, 0, Math.PI*2);
+    ctxs[ctx].closePath();
+    ctxs[ctx].fill();
+    ctxs[ctx].stroke();
+  }
+  
+
+}
+
+function concentric1(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 15;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+
+    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*10+100 )+",50%,80%,1)";
+    ctxs[ctx].beginPath();
+    ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, 0-(Math.radians(90)), d/32-(Math.radians(90)) );
+    ctxs[ctx].closePath();
+    ctxs[ctx].stroke();
+  }
+}
+
+function concentric2(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 15;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+
+    ctxs[ctx].fillStyle = "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,0.6)";
+    ctxs[ctx].beginPath();
+    ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, 0-(Math.radians(90)), d/32-(Math.radians(90)) );
+    ctxs[ctx].closePath();
+    ctxs[ctx].fill();
+  }
+}
+
+function concentric21(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 15;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+
+    ctxs[ctx].fillStyle = "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,0.3)";
+    ctxs[ctx].beginPath();
+    ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, (0-(Math.radians(90)))+(Math.radians(i*10)), (d/32-(Math.radians(90)))+(Math.radians(i*10)) );
+    ctxs[ctx].closePath();
+    ctxs[ctx].fill();
+  }
+}
+
+function concentric3(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 15;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+    ctxs[ctx].fillStyle = "hsla("+Math.round( i*15+100 )+",50%,80%,0.4)";
+    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*15+100 )+",50%,80%,0.8)";
+    ctxs[ctx].beginPath();
+    ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, 0-(Math.radians(90)), d/32-(Math.radians(90)) );
+    ctxs[ctx].closePath();
+    ctxs[ctx].fill();
+    ctxs[ctx].stroke();
   }
 
 }
 
-function centreCirc2(ctx) {
+function concentric31(ctx, frequencies) {
   ctxs[ctx].fillStyle = "#000";
   ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 15;
 
-  var frequencies = adjustFreqData(8);
-  var newData = frequencies.newFreqs;
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
 
-  for(var i=0;i<newData.length;i++) {
-    var d = newData[i];
-    var transparency = d/200;
-
-    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,"+transparency+")";
-    ctxs[ctx].fillStyle = "hsla("+Math.round( i*(20+(d/255)) )+",50%,80%,"+transparency+")";
-    ctxs[ctx].globalCompositeOperation = "hard-light";
+    ctxs[ctx].fillStyle = "hsla("+Math.round( i*10+100 )+",50%,80%,0.3)";
+    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*10+100 )+",50%,80%,0.8)";
     ctxs[ctx].beginPath();
-    ctxs[ctx].lineWidth = 15;
-    ctxs[ctx].arc(screen.centerX, screen.centerY, i*64, 0, Math.PI*2);
+    ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, (0-(Math.radians(90)))+(Math.radians(i*10)), (d/32-(Math.radians(90)))+(Math.radians(i*10)) );
+    ctxs[ctx].closePath();
+    ctxs[ctx].fill();
+    ctxs[ctx].stroke();
+  }
+
+}
+
+function concentric4(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 15;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+
+    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*10+100 )+",50%,80%,0.7)";
+    ctxs[ctx].beginPath();
+    ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, 0-(Math.radians(90)), d/32-(Math.radians(90)) );
+    ctxs[ctx].closePath();
+    ctxs[ctx].stroke();
+
+    ctxs[ctx].beginPath();
+    ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, 0-(Math.radians(90)), d/32+(Math.radians(90)), true);
+    ctxs[ctx].closePath();
+    ctxs[ctx].stroke();    
+  }
+
+}
+
+function hex(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 2;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+
+    drawHex(ctxs[ctx], d, i*80, i*50);
+    ctxs[ctx].strokeStyle = "hsla("+(i*10+100)+",60%,80%,1)";
+    ctxs[ctx].fillStyle = "hsla("+(i*10+100)+",60%,80%,0.8)";
+    // ctxs[ctx].arc(x, y, d/(j*5), 0, Math.PI*2);
     ctxs[ctx].fill();
     ctxs[ctx].stroke();
 
@@ -128,13 +243,78 @@ function centreCirc2(ctx) {
 
 }
 
+function hex2(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 2;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+    drawHex(ctxs[ctx], 80, (i%16)*90, (i%14)*80);
+    ctxs[ctx].strokeStyle = "hsla("+(i*10)+",60%,80%,1)";
+    ctxs[ctx].fillStyle = "hsla("+(i*10)+",60%,"+d/2+"%,0.8)";
+    ctxs[ctx].fill();
+    ctxs[ctx].stroke();
+
+  }
+
+}
+
+function hex3(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 2;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+    // ctxs[ctx].beginPath();
+    drawHex(ctxs[ctx], 120+(d/12), (i%24)*90, (i%14)*60);
+    ctxs[ctx].strokeStyle = "hsla("+(i*30)+",60%,80%,1)";
+    ctxs[ctx].fillStyle = "hsla(0,0%,"+d/1.5+"%,0.4)";
+    ctxs[ctx].fill();
+    ctxs[ctx].stroke();
+
+  }
+
+}
+
+function hex4(ctx, frequencies) {
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width, screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 2;
+
+  for(var i=0;i<frequencies.length;i++) {
+    var d = frequencies[i];
+    // ctxs[ctx].beginPath();
+    drawHex(ctxs[ctx], d, (i%24)*90, (i%14)*60);
+    ctxs[ctx].strokeStyle = "hsla("+(i*3)+",60%,80%,1)";
+    ctxs[ctx].fillStyle = "hsla("+(i*3)+",60%,"+d/2+"%,0.4)";
+    // ctxs[ctx].arc(x, y, d/(j*5), 0, Math.PI*2);
+    ctxs[ctx].fill();
+    ctxs[ctx].stroke();
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
 function ljsLilHeart(ctx) {
 
   ctxs[ctx].fillStyle = "#000";
   ctxs[ctx].fillRect(0,0,screen.width, screen.height);
 
   var frequencies = adjustFreqData(8);
-  var newData = frequencies.newFreqs;
+  var frequencies = frequencies.newFreqs;
 
   for(var i=0;i<newData.length;i++) {
     var d = newData[i];

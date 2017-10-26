@@ -3,9 +3,9 @@
 var sets = [
 
   {
-    name: 'coldFront',
+    name: 'buda',
     tracks: [
-      'fourAll','fourInfo','fourTitle','',
+      'bpLogo','bpFilm','bpPlace','bpSinner',
       // 'cfStars', 'cfBack', '', '',
       '', '', '', '',
 
@@ -13,10 +13,10 @@ var sets = [
       // 'ljsLilHeart','ljsBigHeart','','',
       '','','','',
 
+      'matrix','mill','','','','','','',
+
       'pooh','sleepBeu','matrix','topgun',
       'mill','startrek','','',
-
-      '','','','','','','',''
 
     ]
   },
@@ -24,15 +24,15 @@ var sets = [
   {
     name: 'abstract',
     tracks: [
-      'absRocket','absSpace','absSquare','absDots',
-      'absLines','absDots2','absDots3','absHex',
+      'absRocket','absSpace','absSquare','absBlobs',
+      'absLines','absDots2','absCircle','absHex',
 
       'circJelly','circKoll','circMocirc','circOutb',
       'circPoxels','circShifting','circSignal','',
 
-      'ctx2DcentreCirc1','','','','','','','',
+      'ctx2DcentreCirc1','ctx2DcentreCirc2','ctx2Dconcentric1','ctx2Dconcentric2','ctx2Dconcentric21','ctx2Dconcentric3','ctx2Dconcentric31','ctx2Dconcentric4',
 
-      '','','','','','','',''
+      'ctx2Dhex','ctx2Dhex2','ctx2Dhex3','ctx2Dhex4','','','',''
 
     ]
   },
@@ -46,9 +46,10 @@ var sets = [
       'dangermouse','mysterious','bananaman','superted',
       'powerpuff','pokemon','pony','trapdoor',
 
-      'pong','chuckie','pacman','spaceInv','breakout','donkey','tetris','xenon',
 
-      '','','','','','','',''
+      'pongReg','pongFast','breakout','breakoutShoot','spaceInv','spaceInvAd','tetrisBW','tetrisCol',
+
+      'pacmanReg','pacmanBW','pacman3d','donkey','chuckie','','',''
 
     ]
   },

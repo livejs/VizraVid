@@ -23,8 +23,8 @@
   transform: scale(var(--zoom)) translateX(var(--transX)) translateY(var(--transY)) rotate(var(--rotate));
 }
 
-#black {opacity: var(--blackFade);}
-#white {opacity: var(--whiteFade);}
+#black {opacity: var(--blackFade); transition: opacity 2s;}
+#white {opacity: var(--whiteFade); transition: opacity 2s;}
 
 
 
