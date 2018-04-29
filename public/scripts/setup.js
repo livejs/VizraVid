@@ -34,8 +34,8 @@ var set = sets[0],
   screenNo = 1,
   libraryTrack = library['thundercats'];
 
-var screenDomFunc = [centreCirc1, centreCirc2],
-  freqResolutions = [32,8];
+var screenDomFunc = [concentric4, concentric31],
+  freqResolutions = [32,32];
 
 // set mixing params
 var threshold = 100, volume = 130;
@@ -62,30 +62,35 @@ analyserNode.fftSize = 8192;
 
 
 // only call request animation frame on function you actually want to run
+let renderFrame = true;
 function reqAnim() {
   requestAnimationFrame(reqAnim);
 
-  // returns .newFreqsOne, newFreqsTwo, .mixFreqs, lowFreqs, midFreqs, highFreqs
-  const mixDataCount = 12;
-  var freqs = adjustFreqData(freqResolutions, mixDataCount);
+  if (renderFrame) {
+    renderFrame = false;
 
-  screenDomFunc[1](1, freqs.newFreqsTwo);
-  screenDomFunc[0](0, freqs.newFreqsOne);
-
-  // mixing
-  for (var i=0; i<mixDataCount; i++) {
-    if (freqs.mixFreqs[i] > threshold){
-      if (i<(mixDataCount/2)) {
-        screens[1].style.opacity = '1';
-        screens[0].style.opacity = '0';
-        // screenDomFunc[1](1);
-      } else {
-        screens[1].style.opacity = '0';
-        screens[0].style.opacity = '1';
-        // screenDomFunc[0](0);
+    // returns .newFreqsOne, newFreqsTwo, .mixFreqs, lowFreqs, midFreqs, highFreqs
+    const mixDataCount = 12;
+    var freqs = adjustFreqData(freqResolutions, mixDataCount);
+    // mixing
+    for (var i=0; i<mixDataCount; i++) {
+      if (freqs.mixFreqs[i] > threshold){
+        if (i<(mixDataCount/2)) {
+          screens[1].style.opacity = '1';
+          screens[0].style.opacity = '0';
+          screenDomFunc[1](1, freqs.newFreqsTwo);
+        } else {
+          screens[1].style.opacity = '0';
+          screens[0].style.opacity = '1';
+          screenDomFunc[0](0, freqs.newFreqsOne);
+        }
       }
     }
+  } else {
+    renderFrame = true;
   }
+
+  
   
 }
 

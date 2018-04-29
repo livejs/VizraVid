@@ -189,8 +189,10 @@ function concentric31(ctx, frequencies) {
   for(var i=0;i<frequencies.length;i++) {
     var d = frequencies[i];
 
-    ctxs[ctx].fillStyle = "hsla("+Math.round( i*10+100 )+",50%,80%,0.3)";
-    ctxs[ctx].strokeStyle = "hsla("+Math.round( i*10+100 )+",50%,80%,0.8)";
+    var colour = i*10+100
+
+    ctxs[ctx].fillStyle = "hsla("+i*10+100+",50%,80%,0.3)";
+    ctxs[ctx].strokeStyle = "hsla("+i*10+100+",50%,80%,0.8)";
     ctxs[ctx].beginPath();
     ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, (0-(Math.radians(90)))+(Math.radians(i*10)), (d/32-(Math.radians(90)))+(Math.radians(i*10)) );
     ctxs[ctx].closePath();
