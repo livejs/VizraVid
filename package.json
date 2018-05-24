@@ -1,6 +1,6 @@
 {
   "name": "Vizra",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "VJing Software",
   "main": "server.js",
   "repository": {
@@ -8,21 +8,17 @@
     "type": "git"
   },
   "scripts": {
-    "vizra": "nodemon server.js",
-    "build-css": "node-sass --output-style compressed -o public/styles src",
-    "watch-sass": "nodemon -e scss -x \"npm run build-css\""
+    "vizra": "nodemon server.js"
   },
   "author": "Ruth John <rumyra@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.18.3",
     "dotenv": "^2.0.0",
-    "express": "^4.14.0",
-    "htmling": "^0.0.7"
+    "express": "^4.16.3",
+    "htmling": "0.0.8"
   },
   "devDependencies": {
-    "node-sass": "^3.10.1",
-    "nodemon": "^1.11.0",
-    "webpack": "^3.5.5"
+    "nodemon": "^1.17.5"
   }
 }
