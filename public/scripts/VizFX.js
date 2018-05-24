@@ -63,8 +63,13 @@ var VizFX = (function() {
   vizFXMethods.fade = function(type, amount) {
     if (type === 'white') {
       document.documentElement.style.setProperty("--whiteFade", amount);
-    } else {
+      document.documentElement.style.setProperty("--blackFade", 0);
+    } else if (type === 'black') {
       document.documentElement.style.setProperty("--blackFade", amount);
+      document.documentElement.style.setProperty("--whiteFade", 0);
+    } else {
+      document.documentElement.style.setProperty("--blackFade", 0);
+      document.documentElement.style.setProperty("--whiteFade", 0);
     }
   }
 

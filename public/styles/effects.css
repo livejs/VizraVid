@@ -13,6 +13,8 @@
   --blackFade: 0;
 }
 
+.screens {will-change:opacity;}
+
 .video video {
   filter: contrast(120%) brightness(120%) invert(var(--invert)) grayscale(var(--grayscale)) hue-rotate(var(--hue)) blur(var(--blur));
   transform: scale(var(--zoom)) translateX(var(--transX)) translateY(var(--transY)) rotate(var(--rotate));
@@ -23,8 +25,8 @@
   transform: scale(var(--zoom)) translateX(var(--transX)) translateY(var(--transY)) rotate(var(--rotate));
 }
 
-#black {opacity: var(--blackFade);}
-#white {opacity: var(--whiteFade);}
+#black {opacity: var(--blackFade); transition: opacity 2s;}
+#white {opacity: var(--whiteFade); transition: opacity 2s;}
 
 
 

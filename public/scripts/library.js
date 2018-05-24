@@ -48,26 +48,16 @@ var library = {
     for: "island"
   },
 
-  pong: {
-    file: "games/pong.mp4",
+  
+
+  pongReg: {
+    file: "games/pongReg.mp4",
     type: "video",
     for: "games"
   },
 
-  chuckie: {
-    file: "games/chuckie.mp4",
-    type: "video",
-    for: "games"
-  },
-
-  pacman: {
-    file: "games/pacman.mp4",
-    type: "video",
-    for: "games"
-  },
-
-  spaceInv: {
-    file: "games/spaceinv.mp4",
+  pongFast: {
+    file: "games/pongFast.mp4",
     type: "video",
     for: "games"
   },
@@ -78,18 +68,66 @@ var library = {
     for: "games"
   },
 
+  breakoutShoot: {
+    file: "games/breakoutShoot.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  spaceInv: {
+    file: "games/spaceInv.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  spaceInvAd: {
+    file: "games/spaceInvAd.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  tetrisBW: {
+    file: "games/tetrisBW.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  tetrisCol: {
+    file: "games/tetrisCol.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  pacmanReg: {
+    file: "games/pacmanReg.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  pacmanBW: {
+    file: "games/pacmanBW.mp4",
+    type: "video",
+    for: "games"
+  },
+
+  pacman3d: {
+    file: "games/pacman3d.mp4",
+    type: "video",
+    for: "games"
+  },
+
   donkey: {
-    file: "games/donkey.mp4",
+    file: "games/donkeyKong.mp4",
     type: "video",
     for: "games"
   },
 
-  tetris: {
-    file: "games/tetris.mp4",
+  chuckie: {
+    file: "games/chuckie.mp4",
     type: "video",
     for: "games"
   },
-
+  
   xenon: {
     file: "games/xenon.mp4",
     type: "video",
@@ -114,7 +152,7 @@ var library = {
     for: "abstract"
   },
 
-  absDots: {
+  absBlobs: {
     file: "abstract/dots07.mp4",
     type: "video",
     for: "abstract"
@@ -134,6 +172,12 @@ var library = {
 
   absDots3: {
     file: "abstract/dots06.mp4",
+    type: "video",
+    for: "abstract"
+  },
+
+  absCircle: {
+    file: "abstract/circular03.mp4",
     type: "video",
     for: "abstract"
   },
@@ -276,18 +320,6 @@ var library = {
     for: "tv"
   },
 
-  ctx2DcentreCirc1: {
-    function: centreCirc1,
-    type: "dom",
-    for: "circles"
-  },
-
-  ctx2DcentreCirc2: {
-    function: centreCirc2,
-    type: "dom",
-    for: "circles"
-  },
-
   ljsBigHeart: {
     function: "ljsBigHeart",
     type: "dom",
@@ -390,6 +422,30 @@ var library = {
     for: "404conf"
   },
 
+  bpLogo: {
+    file: "confs/jsconfbp.mp4",
+    type: "video",
+    for: "jsconfbp"
+  },
+
+  bpFilm: {
+    file: "confs/jsconfbpFilm.mp4",
+    type: "video",
+    for: "jsconfbp"
+  },
+
+  bpPlace: {
+    file: "confs/jsconfbpPlace.mp4",
+    type: "video",
+    for: "jsconfbp"
+  },
+
+  bpSinner: {
+    file: "confs/sinner.mp4",
+    type: "video",
+    for: "jsconfbp"
+  },
+
   fourTitle: {
     file: "confs/404conTitle.mp4",
     type: "video",
@@ -406,6 +462,92 @@ var library = {
     function: "cfBk",
     type: "dom",
     for: "coldfront"
+  },
+
+  // ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  ctx2DcentreCirc1: {
+    function: centreCirc1,
+    freqRes: 32,
+    type: "dom",
+    for: "circles"
+  },
+
+  ctx2DcentreCirc2: {
+    function: centreCirc2,
+    freqRes: 8,
+    type: "dom",
+    for: "circles"
+  },
+
+  ctx2Dconcentric1: {
+    function: concentric1,
+    freqRes: 16,
+    type: "dom",
+    for: "circles"
+  },
+
+  ctx2Dconcentric2: {
+    function: concentric2,
+    freqRes: 16,
+    type: "dom",
+    for: "circles"
+  },
+
+  ctx2Dconcentric21: {
+    function: concentric21,
+    freqRes: 32,
+    type: "dom",
+    for: "circles"
+  },
+
+  ctx2Dconcentric3: {
+    function: concentric3,
+    freqRes: 16,
+    type: "dom",
+    for: "circles"
+  },
+
+  ctx2Dconcentric31: {
+    function: concentric31,
+    freqRes: 32,
+    type: "dom",
+    for: "circles"
+  },
+
+  ctx2Dconcentric4: {
+    function: concentric4,
+    freqRes: 24,
+    type: "dom",
+    for: "circles"
+  },
+
+  ctx2Dhex: {
+    function: hex,
+    freqRes: 16,
+    type: "dom",
+    for: "hexagons"
+  },
+
+  ctx2Dhex2: {
+    function: hex2,
+    freqRes: 128,
+    type: "dom",
+    for: "hexagons"
+  },
+
+  ctx2Dhex3: {
+    function: hex3,
+    freqRes: 128,
+    type: "dom",
+    for: "hexagons"
+  },
+
+  ctx2Dhex4: {
+    function: hex4,
+    freqRes: 128,
+    type: "dom",
+    for: "hexagons"
   },
 
 
