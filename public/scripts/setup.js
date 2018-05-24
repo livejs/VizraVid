@@ -90,15 +90,17 @@ function reqAnim() {
     renderFrame = true;
   }
 
-  
-  
+
+
 }
+
+// global array is the result - this is what the worker would push the new data back into.
 
 // pass in arr of shape count for both canvas functions
 function adjustFreqData(freqResolutions, mixArrCount) {
   analyserNode.getByteFrequencyData(frequencyData);
   var removed = frequencyData.slice(0,1024);
-  
+
   var newFreqsOne = [], newFreqsTwo = [], mixFreqs = [], lowFreqs, midFreqs, highFreqs;
 
   function returnNewArr(newCount) {
@@ -158,7 +160,7 @@ function adjustFreqData(freqResolutions, mixArrCount) {
   lowFreqs = avFreqs(frequencyData.slice(0,oneThird));
   midFreqs = avFreqs(frequencyData.slice(oneThird, oneThird*2));
   highFreqs = avFreqs(frequencyData.slice(oneThird*2));
-  
+
   return {
     newFreqsOne: newFreqsOne,
     newFreqsTwo: newFreqsTwo,
