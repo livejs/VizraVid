@@ -31,7 +31,7 @@ var set = sets[0],
   screenNo = 1,
   libraryTrack = library['thundercats'];
 
-var screenDomFunc = [liveJSHeartFill, concentric31],
+var screenDomFunc = [jsconfSquare, concentric31],
   freqResolutions = [32,32];
 
 // set mixing params

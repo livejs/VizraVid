@@ -81,6 +81,266 @@ function liveJSHeartFill(ctx, frequencies) {
 
 }
 
+function liveJSText(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawLivejsText(ctxs[ctx], options);
+  }
+
+}
+
+function liveJSText(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawLivejsText(ctxs[ctx], options);
+  }
+
+}
+
+function jsconfLogo(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawJsconfeuLogo(ctxs[ctx], options);
+  }
+
+}
+
+function jsconfText(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawJsconfeuText(ctxs[ctx], options);
+  }
+
+}
+
+function jsconfLeaf(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawJsconfeuLeaf(ctxs[ctx], options);
+  }
+
+}
+
+function jsconfRect(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawJsconfeuRectangle(ctxs[ctx], options);
+  }
+
+}
+
+function jsconfSnake(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawJsconfeuSnake(ctxs[ctx], options);
+  }
+
+}
+
+function jsconfTriangle(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawJsconfeuTriangle(ctxs[ctx], options);
+  }
+
+}
+
+function jsconfCircle(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawJsconfeuCircle(ctxs[ctx], options);
+  }
+
+}
+
+function jsconfSquare(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawJsconfeuSquare(ctxs[ctx], options);
+  }
+
+}
+
 function centreCirc1(ctx, frequencies) {
   ctxs[ctx].fillStyle = "#000";
   ctxs[ctx].fillRect(0,0,screen.width,screen.height);
