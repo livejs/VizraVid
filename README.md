@@ -18,4 +18,11 @@ This is very much a learning experience for me, I am creating a piece of softwar
 
 #### Set up
 
-Basic express build, so run npm install once you have cloned the repo. The more I build on this the more I will expand on this readme 🙏🏻
+Basic express build, so run npm install once you have cloned the repo.
+
+- Run `npm run vizra`
+- Go to `localhost:3000`
+- Visuals are run from `/screen` view
+
+The more I build on this the more I will expand on this readme 🙏🏻
+

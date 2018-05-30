@@ -1,5 +1,7 @@
 /* CONTENTS
 
+functions needed
+
 mixing control
 
 change what's showing
@@ -7,6 +9,24 @@ change what's showing
 effects
 
 */
+
+// functions needed
+// VIDEOS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+var changeVidSrc = function changeVidSrc(videoEl, newSrc) {
+  videoEl.src = newSrc;
+}
+
+
+// hiding/showing vid css
+var showVideo = function showVideo(vidEl, domEl) {
+  vidEl.style.display = "block"
+  domEl.style.display = "none"
+}
+var showDom = function showDom(vidEl, domEl) {
+  domEl.style.display = "block"
+  vidEl.style.display = "none"
+}
+
 
 function onMIDIMessage(message) {
     data = message.data;
@@ -68,16 +88,16 @@ function onMIDIMessage(message) {
 
               ctxs[screenNo].clearRect(0,0,screen.width,screen.height);
               showDom(vidScreens[screenNo], domScreens[screenNo]);
-              
+
               currentEls[screenNo] = canvasEls[screenNo];
               screenDomFunc[screenNo] = libraryTrack.function;
               freqResolutions[screenNo] = libraryTrack.freqRes;
-              reqAnim();  
+              reqAnim();
 
               // var svg = d3.select(svgEls[screenNo]);
               // svg.selectAll('*').remove();
-              
-          
+
+
           }
         }// not '' track
 
@@ -172,7 +192,7 @@ function onMIDIMessage(message) {
       VizFX.fade('out',0);
     }
 
-    
+
 
     return data;
 }

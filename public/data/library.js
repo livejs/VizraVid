@@ -48,7 +48,7 @@ var library = {
     for: "island"
   },
 
-  
+
 
   pongReg: {
     file: "games/pongReg.mp4",
@@ -127,7 +127,7 @@ var library = {
     type: "video",
     for: "games"
   },
-  
+
   xenon: {
     file: "games/xenon.mp4",
     type: "video",
@@ -560,138 +560,5 @@ var library = {
 
 };
 
-// var library2 = {
-
-//     // video & dom
-
-//     // file set after folder
-
-//     // file video clip or function
-
-//     // group in eights?
-
-//   video: {
-
-//     island:
-//     [
-//       "cell",
-//       "habClips",
-//       "showcase",
-//       "peluzah",
-//       "island",
-//       "cellar",
-//       "habitus",
-//       "dusty"
-      
-//     ],
-
-//     games:
-//     [
-//       "pong",
-//       "chuckie",
-//       "pacman",
-//       "spaceinv",
-      
-//       "breakout",
-//       "donkey",
-//       "tetris",
-//       "xenon"
-//     ],
-
-//     abstract:
-//     [
-//       "rockets01",
-//       "space01",
-//       "squares01",
-//       "dots07",
-
-//       "lines01",
-//       "dots02",
-//       "dots06",
-//       "hexagons01"
-//     ],
-
-//     cartoons1:
-//     [
-//       "thundercats01",
-//       "heman",
-//       "shera",
-//       "defenders",
-
-//       "bucky",
-//       "battle",
-//       "teenage",
-//       "dungeons",
-//     ],
-
-//     cartoons2: 
-//     [
-//       "dangermouse",
-//       "bananaman",
-//       "mysterious",
-//       "superted",
-
-//       "powerpuff",
-//       "pokemon",
-//       "pony",
-//       "trapdoor"
-//     ]
-//   },
-
-//   dom: {
-
-//     jsConf: [
-//       jsConfLogo10,
-//       jsConfLogo20,
-//       jsConfShapes13,
-//       jsConfShapes14,
-//       jsConfShapes15
-//     ],
-
-//     centStripes: [
-//       concentric,
-//       concentric2,
-//       shell,
-//       superChart,
-//       superSun,
-//       spectrum,
-//       superChart,
-//       stripes
-//     ],
-
-//     diagCirc: [
-//       dots,
-//       dots2,
-//       diagonalCircles,
-//       diagCircLine,
-      
-//       triangles,
-//       triangles2,
-//       diagonalCircles,
-//       diagCircLine
-//     ]
-
-//   }
-
-
-// // "circular01",
-// // "hexagons01", -
-// // "dots01",
-// // "rockets01", -
-// // "circular02",
-// // "dots04",
-// // "circular03",
-// // "space01", -
-// // "circular06",
-// // "dots02", -
-// // "dots07", -
-// // "lines01", -
-// // "dots06", -
-// // "snakes01",
-// // "dots03",
-// // "squares01" -
-
-  
-// }
 
 // fireman sam - jason & wheeled warriors - jamie magic torch - fraggle rock - ulessys - poddingto peas - thunderbirds - captain planets - gummi bears
