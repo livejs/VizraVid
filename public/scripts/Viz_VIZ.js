@@ -1,71 +1,85 @@
-// SCREENS ~~~~~~~~~~~~~~~~~~~~~~~~~~
-var mixScreens = function mixScreens() {
-  // console.log('Threshold for mix: ' + threshold);
-  requestAnimationFrame(mixScreens);
-  //constantly getting feedback from data
-  analyserNode.getByteFrequencyData(frequencyData);
-
-  for (var i=0; i<49; i++) {
-    var freqDataKey = i*8;
-    if (frequencyData[freqDataKey] > threshold){
-      if (i<10) {
-        screens[1].style.opacity = '1';
-      } else {
-        screens[1].style.opacity = '0';
-      }
-    }
-  }
-}
-
-
-// VIDEOS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-var changeVidSrc = function changeVidSrc(videoEl, newSrc) {
-  videoEl.src = newSrc;
-}
-
-
-// hideing/showing vid css
-var showVideo = function showVideo(vidEl, domEl) {
-  vidEl.style.display = "block"
-  domEl.style.display = "none"
-}
-var showDom = function showDom(vidEl, domEl) {
-  domEl.style.display = "block"
-  vidEl.style.display = "none"
-}
-
-// some generic draw functions to be moved to library
 Math.radians = function(degrees) {
   return degrees * Math.PI / 180;
 };
-
-function drawHex(ctx, sideLength, startX, startY) {
-
-  // maths mother fucker
-  const moveX = Math.sin(Math.radians(30))*sideLength;
-  const moveY = Math.cos(Math.radians(30))*sideLength;
-
-  // I actually want the origin to be in the centre
-  var startX = startX-(sideLength/2);
-  var startY = startY-moveY;
-
-  ctx.beginPath(); // instigate
-  ctx.moveTo(startX, startY); // start at pos
-  ctx.lineTo(startX+sideLength, startY); // go right along top (we're drawing clockwise from top left)
-
-  ctx.lineTo(startX+sideLength+moveX, startY+moveY);
-  ctx.lineTo(startX+sideLength, startY+(moveY*2));
-  ctx.lineTo(startX, startY+(moveY*2));
-  ctx.lineTo(startX-moveX, startY+moveY);
-  ctx.lineTo(startX, startY);
-  ctx.closePath();
-}
 
 function clearRect(ctx) {
   ctxs[ctx].clearRect(0,0,screen.width,screen.height);
 }
 
+function translate(i) {
+  return "translate("+(i%16)*z+","+Math.round(Math.floor(i/16))*z+")";
+}
+
+// can use for options position
+// what if I want the distribution to come from the center? I certainly do for jsconf on the y axis
+function returnPosition(xCount, yCount, itemNo) {
+  xCount = Number(xCount);
+  yCount = Number(yCount);
+  let position = {};
+  let xGap = Math.floor(screen.width/(xCount+2) );
+  let yGap = Math.floor(screen.height/(yCount+2) );
+  position.x = ( (itemNo%xCount) +1 )*xGap;
+  position.y = ( Math.floor(itemNo/xCount) +1 )*yGap;
+
+  return position;
+}
+
 //~~~~~~~~~~~~~~~~~~~~~~
+// this seriously needs to be something extendable omg
+
+function liveJSHeart(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawLivejsHeartOutline(ctxs[ctx], options);
+  }
+
+}
+
+function liveJSHeartFill(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    drawLivejsHeartSolid(ctxs[ctx], options);
+  }
+
+}
 
 function centreCirc1(ctx, frequencies) {
   ctxs[ctx].fillStyle = "#000";
@@ -85,7 +99,7 @@ function centreCirc1(ctx, frequencies) {
     ctxs[ctx].closePath();
     ctxs[ctx].stroke();
   }
-  
+
 }
 
 function centreCirc2(ctx, frequencies) {
@@ -106,7 +120,7 @@ function centreCirc2(ctx, frequencies) {
     ctxs[ctx].fill();
     ctxs[ctx].stroke();
   }
-  
+
 
 }
 
@@ -220,7 +234,7 @@ function concentric4(ctx, frequencies) {
     ctxs[ctx].beginPath();
     ctxs[ctx].arc(screen.centerX, screen.centerY, i*24, 0-(Math.radians(90)), d/32+(Math.radians(90)), true);
     ctxs[ctx].closePath();
-    ctxs[ctx].stroke();    
+    ctxs[ctx].stroke();
   }
 
 }
