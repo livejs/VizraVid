@@ -40,7 +40,12 @@ function alterArr(arrToChange) {
       newValue = parseInt(total/itemCount);
     }
     // add to new array
-    newArr.push(newValue);
+    if (isNaN(newValue)) {
+      newArr.push(arrToChange[500]);
+    } else {
+      newArr.push(newValue);
+    }
+
 
     prevItemCount = itemCount;
     prevRangeStart = rangeStart;

@@ -61,7 +61,7 @@ function drawLivejsHeartOutline(ctx, {scale = 1,  position = {x: 0, y: 0}, fill 
 
   ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
-  ctx.translate(position.x, position.y);
+  ctx.translate(position.x-(107*scale), position.y-(122*scale));
 	ctx.scale(scale, scale);
 
 
@@ -282,7 +282,8 @@ function drawLivejsHeartSolid(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 
 
   ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
-  ctx.translate(position.x, position.y);
+  ctx.translate(position.x-(40*scale), position.y-(25*scale));
+  // ctx.translate(position.x, position.y);
 	ctx.scale(scale, scale);
 
 	ctx.beginPath();
@@ -472,7 +473,7 @@ function drawLivejsText(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white
 
 	ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
-  ctx.translate(position.x, position.y);
+  ctx.translate(position.x-(161*scale), position.y-(40*scale));
 	ctx.scale(scale, scale);
 
 	ctx.beginPath();
@@ -727,8 +728,8 @@ function drawLivejsText(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white
 function drawJsconfeuLogo(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
 
 	ctx.fillStyle = fill;
-  ctx.strokeStyle = stroke;
-  ctx.translate(position.x, position.y);
+	ctx.strokeStyle = stroke;
+	ctx.translate(position.x-(98*scale), position.y-(98*scale));
 	ctx.scale(scale, scale);
 
 	ctx.beginPath();
@@ -758,7 +759,7 @@ function drawJsconfeuText(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'whi
 
 	ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
-  ctx.translate(position.x, position.y);
+  ctx.translate(position.x-(162*scale), position.y-(29*scale));
 	ctx.scale(scale, scale);
 
 	ctx.beginPath();
@@ -951,12 +952,13 @@ function drawJsconfeuText(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'whi
 
 }
 
-function drawJsconfeuLeaf(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+function drawJsconfeuLeaf(ctx, {scale = 1,  position = {x: 0, y: 0}, rotate = 0, fill = 'white', stroke = 'white'} = {}) {
 
 	ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
   ctx.translate(position.x, position.y);
 	ctx.scale(scale, scale);
+	ctx.rotate(rotate);
 
 	ctx.beginPath();
 	ctx.moveTo(318,141.212116);
@@ -1058,12 +1060,13 @@ function drawJsconfeuLeaf(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'whi
 	ctx.stroke();
 }
 
-function drawJsconfeuRectangle(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+function drawJsconfeuRectangle(ctx, {scale = 1,  position = {x: 0, y: 0}, rotate = 1, fill = 'white', stroke = 'white'} = {}) {
 
 	ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
   ctx.translate(position.x, position.y);
 	ctx.scale(scale, scale);
+	ctx.rotate(rotate);
 
 	ctx.beginPath();
 	ctx.moveTo(131.973349,53.173491);
@@ -1119,12 +1122,13 @@ function drawJsconfeuRectangle(ctx, {scale = 1,  position = {x: 0, y: 0}, fill =
 	ctx.stroke();
 }
 
-function drawJsconfeuSnake(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+function drawJsconfeuSnake(ctx, {scale = 1,  position = {x: 0, y: 0}, rotate = 1, fill = 'white', stroke = 'white'} = {}) {
 
 	ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
   ctx.translate(position.x, position.y);
 	ctx.scale(scale, scale);
+	ctx.rotate(rotate);
 
 	ctx.beginPath();
 	ctx.moveTo(264.122525,175.858106);
@@ -1205,15 +1209,16 @@ function drawJsconfeuSnake(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'wh
 	ctx.closePath();
 	ctx.resetTransform();
 	ctx.fill();
-	ctx.stroke();
+		ctx.stroke();
 }
 
-function drawJsconfeuTriangle(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+function drawJsconfeuTriangle(ctx, {scale = 1,  position = {x: 0, y: 0}, rotate = 1, fill = 'white', stroke = 'white'} = {}) {
 
 	ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
   ctx.translate(position.x, position.y);
 	ctx.scale(scale, scale);
+	ctx.rotate(rotate);
 
 	ctx.beginPath();
 	ctx.moveTo(80.0812278,-16.2457321);

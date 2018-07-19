@@ -1,5 +1,9 @@
 @import '_reset.css';
 
+html, body {
+  margin: 0px; padding:0px;
+}
+
 :root {
   --vertical: 2vh;
   --gutter: 2vw;
@@ -23,6 +27,7 @@
 
 /* ~~~~~~~~~~~~~ screen view */
 #screen {
+  margin:0px; padding:0px;
   height: 100vh; width:100%;
   box-sizing: border-box;
   overflow: hidden; position: relative;

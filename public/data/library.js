@@ -550,6 +550,97 @@ var library = {
     for: "hexagons"
   },
 
+  jsconfLogoTile: {
+    function: jsconfLogoTile,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsconfLogoScale: {
+    function: jsconfLogoScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsconfTextCenter: {
+    function: jsconfTextCenter,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsconfTextTile: {
+    function: jsconfTextTile,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsconfTextScale: {
+    function: jsconfTextScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSHeartCenter: {
+    function: liveJSHeartCenter,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSHeartScale: {
+    function: liveJSHeartScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSFillHeartScale: {
+    function: liveJSFillHeartScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSTextCenter: {
+    function: liveJSTextCenter,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSTextScale: {
+    function: liveJSTextScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  centerHeart: {
+    function: centerHeart,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  centerHeartThree: {
+    function: centerHeartThree,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsConfShapes: {
+    function: jsconfeuAllShapes,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
 
 
   name: {

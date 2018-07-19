@@ -12,6 +12,7 @@ const screens = document.querySelectorAll('.screen'),
     maxRadius: (window.innerHeight-(window.innerWidth/6))/2,
     minRadius: (window.innerHeight/10)/2
   };
+console.log(videoEls);
 // set up contexts
 var ctxs = [];
 function createContexts() {
@@ -31,11 +32,11 @@ var set = sets[0],
   screenNo = 1,
   libraryTrack = library['thundercats'];
 
-var screenDomFunc = [jsconfSquare, concentric31],
+var screenDomFunc = [centerHeart, jsconfTextCenter],
   freqResolutions = [32,32];
 
-// set mixing params
-var threshold = 100, volume = 130;
+// set mixing params - volumn is getting times by threshold - 2 is the max as the slider returns up to 127
+var threshold = 127, volume = 2;
 const easing = BezierEasing(0.01, 0.8, 0.8, 0.01);
 
 // import { makeAnalyserNode } from './m_audio.js';
@@ -68,7 +69,7 @@ getStreamData().then(render);
 
 // run at 30 fps
 let renderFrame = true;
-const mixDataCount = 12;
+const mixDataCount = 16;
 let newFreqs = [];
 
 // render function (all request animation frame stuff)
@@ -87,6 +88,11 @@ function render() {
     }
 
     // mixing
+
+    // for jsconf try just one returned val
+    // if (newFreqs[16] > threshold)
+
+
     for (var i=0; i<mixDataCount; i++) {
       if (newFreqs[i] > threshold){
         if (i<(mixDataCount/2)) {

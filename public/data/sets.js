@@ -3,20 +3,25 @@
 var sets = [
 
   {
-    name: 'buda',
+    name: 'jsconf',
     tracks: [
-      'bpLogo','bpFilm','bpPlace','bpSinner',
-      // 'cfStars', 'cfBack', '', '',
-      '', '', '', '',
+      'ljsTitle','ljsLogos','ljsBacks','liveJSTextCenter',
+      'liveJSHeartCenter','liveJSHeartScale','liveJSFillHeartScale','liveJSTextScale',
 
-      'ljsTitle','ljsLogos','ljsBacks','',
-      // 'ljsLilHeart','ljsBigHeart','','',
-      '','','','',
+      // '','','','',
 
-      'matrix','mill','','','','','','',
+      // 'matrix','mill','','','','','','',
 
-      'pooh','sleepBeu','matrix','topgun',
-      'mill','startrek','','',
+      // 'pooh','sleepBeu','matrix','topgun',
+      // 'mill','startrek','','',
+
+      'jsconfTextCenter','jsconfTextScale','centerHeart','centerHeartThree','jsConfShapes','jsconfLogoTile','jsconfLogoScale','jsconfTextTile',
+
+      'absRocket','absSpace','absSquare','absBlobs',
+      'absLines','absDots2','absCircle','absHex',
+
+      'circJelly','circKoll','circMocirc','circOutb',
+      'circPoxels','circShifting','circSignal','',
 
     ]
   },
