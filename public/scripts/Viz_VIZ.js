@@ -68,6 +68,162 @@ function cycleColours(index, light=true) {
 //~~~~~~~~~~~~~~~~~~~~~~
 // this seriously needs to be something extendable omg
 
+function center2xaa(ctx, frequencies) {
+
+  let pulse = frequencies[16];
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = returnHslaString(jsconfeucols.black, 1);
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  let d = pulse;
+  let unit = d/200; // make like 1 instead of 100
+
+  options.scale = unit;
+  options.position = {};
+  options.position.x = screen.centerX;
+  options.position.y = screen.centerY;
+  options.fill = returnHslaString(jsconfeucols.cream, 0.8);
+  options.stroke = returnHslaString(jsconfeucols.cream, 1);
+
+  draw2xaa(ctxs[ctx], options);
+}
+
+function scale2xaa(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = returnHslaString(jsconfeucols.black, 1);
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = unit;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = returnHslaString(cycleColours(i),0.7);
+    options.stroke = returnHslaString(cycleColours(i),1);
+
+    draw2xaa(ctxs[ctx], options);
+  }
+
+}
+
+function scaleFill2xaa(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = returnHslaString(jsconfeucols.black, 1);
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = unit*1.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = returnHslaString(cycleColours(i),0.7);
+    options.stroke = returnHslaString(cycleColours(i),1);
+
+    draw2xaa(ctxs[ctx], options);
+  }
+
+}
+
+function fill2xaa(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#000";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].globalCompositeOperation = "hard-light";
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = 0.5;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    draw2xaa(ctxs[ctx], options);
+  }
+
+}
+
+function center22xaa(ctx, frequencies) {
+
+  let pulse = frequencies[16];
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = returnHslaString(jsconfeucols.black, 1);
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  let d = pulse;
+  let unit = d/200; // make like 1 instead of 100
+
+  options.scale = unit*1.5;
+  options.position = {};
+  options.position.x = screen.centerX;
+  options.position.y = screen.centerY;
+  options.fill = returnHslaString(jsconfeucols.cream, 0.8);
+  options.stroke = returnHslaString(jsconfeucols.cream, 1);
+
+  draw2xaa(ctxs[ctx], options);
+
+}
+
+function twotimesaa(ctx, frequencies) {
+
+  // frequencies = frequencies.filter(val => val % 2 === 0);
+
+  ctxs[ctx].fillStyle = "#fff";
+  ctxs[ctx].fillRect(0,0,screen.width,screen.height);
+  ctxs[ctx].lineWidth = 2;
+
+  let options = {};
+
+  for(let i=0; i<frequencies.length; i++) {
+    let d = frequencies[i];
+    let unit = d/200; // make like 1 instead of 100
+
+    options.scale = unit;
+    options.position = returnPosition(8, 4, i);
+    // options.position.x = i*10;
+    // options.position.y = (i%5)*10;
+    options.fill = "hsla("+Math.round( i*10 )+",50%,80%,"+unit+")";
+    options.stroke = "hsla("+Math.round( i*10 )+",50%,80%,1)";
+
+    draw2xaa(ctxs[ctx], options);
+  }
+
+}
+
+//----------------------
+
 function liveJSHeartCenter(ctx, frequencies) {
 
   let pulse = frequencies[16];

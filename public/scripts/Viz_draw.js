@@ -55,6 +55,90 @@ function drawHeart() {
 
 }
 
+function draw2xaa(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x-(100*scale), position.y-(500*scale));
+	ctx.scale(scale, scale);
+
+	ctx.beginPath();
+	ctx.moveTo(-92,492.1);
+	ctx.lineTo(-92.2,491.90000000000003);
+	ctx.lineTo(-191.5,491.90000000000003);
+	ctx.lineTo(-216.6,525);
+	ctx.lineTo(-117.6,655.8);
+	ctx.lineTo(-117.39999999999999,656);
+	ctx.lineTo(-66.69999999999999,656);
+	ctx.lineTo(-115.99999999999999,590.8);
+	ctx.lineTo(-67.89999999999998,590.8);
+	ctx.lineTo(-18.699999999999974,655.8);
+	ctx.lineTo(-18.599999999999973,656);
+	ctx.lineTo(32.10000000000003,656);
+	ctx.lineTo(-92,492.1);
+	ctx.closePath();
+	ctx.moveTo(-141.5,557.1);
+	ctx.lineTo(-165.4,525.5);
+	ctx.lineTo(-117.30000000000001,525.5);
+	ctx.lineTo(-93.4,557.1);
+	ctx.lineTo(-141.5,557.1);
+	ctx.closePath();
+	ctx.moveTo(154.9,426.9);
+	ctx.lineTo(154.70000000000002,426.7);
+	ctx.lineTo(-388.9,426.7);
+	ctx.lineTo(-512.5,590);
+	ctx.lineTo(-537.4,622.9);
+	ctx.lineTo(-512.3,656);
+	ctx.lineTo(-165.39999999999998,656);
+	ctx.lineTo(-240.49999999999997,556.8);
+	ctx.lineTo(-290.09999999999997,622.4);
+	ctx.lineTo(-338.2,622.4);
+	ctx.lineTo(-264.5,525.1);
+	ctx.lineTo(-289.8,491.6);
+	ctx.lineTo(-339.40000000000003,557.2);
+	ctx.lineTo(-388.8,557.2);
+	ctx.lineTo(-414.3,590.8000000000001);
+	ctx.lineTo(-365,590.8000000000001);
+	ctx.lineTo(-388.9,622.4000000000001);
+	ctx.lineTo(-486.4,622.4000000000001);
+	ctx.lineTo(-413.09999999999997,525.6000000000001);
+	ctx.lineTo(-363.7,525.6000000000001);
+	ctx.lineTo(-338.2,492.0000000000001);
+	ctx.lineTo(-387.59999999999997,492.0000000000001);
+	ctx.lineTo(-363.7,460.4000000000001);
+	ctx.lineTo(-265.4,460.4000000000001);
+	ctx.lineTo(-240.49999999999997,493.4000000000001);
+	ctx.lineTo(-215.59999999999997,460.4000000000001);
+	ctx.lineTo(129.50000000000006,460.4000000000001);
+	ctx.lineTo(252.20000000000005,622.5000000000001);
+	ctx.lineTo(204.10000000000005,622.5000000000001);
+	ctx.lineTo(105.50000000000006,492.2000000000001);
+	ctx.lineTo(105.40000000000006,492.0000000000001);
+	ctx.lineTo(6.1,492.0000000000001);
+	ctx.lineTo(-19,525.1);
+	ctx.lineTo(80,655.9000000000001);
+	ctx.lineTo(80.2,656.1000000000001);
+	ctx.lineTo(130.9,656.1000000000001);
+	ctx.lineTo(81.5,590.9000000000001);
+	ctx.lineTo(129.6,590.9000000000001);
+	ctx.lineTo(178.8,655.9000000000001);
+	ctx.lineTo(179,656.1000000000001);
+	ctx.lineTo(278.3,656.1000000000001);
+	ctx.lineTo(303.40000000000003,623.0000000000001);
+	ctx.lineTo(154.9,426.9);
+	ctx.closePath();
+	ctx.moveTo(56,557.1);
+	ctx.lineTo(32.1,525.5);
+	ctx.lineTo(80.2,525.5);
+	ctx.lineTo(104.1,557.1);
+	ctx.lineTo(56,557.1);
+	ctx.closePath();
+
+	ctx.closePath();
+	ctx.resetTransform();
+	ctx.fill();
+	ctx.stroke();
+}
+
 function drawLivejsHeartOutline(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
 	// ctx.save();
 	// console.log(scale, fill, position);

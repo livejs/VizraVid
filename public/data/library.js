@@ -641,6 +641,48 @@ var library = {
     for: "jsconf"
   },
 
+  center2xaa: {
+    function: center2xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  scale2xaa: {
+    function: scale2xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  scaleFill2xaa: {
+    function: scaleFill2xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  fill2xaa: {
+    function: fill2xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  center22xaa: {
+    function: center22xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  twotimesaa: {
+    function: twotimesaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
 
 
   name: {

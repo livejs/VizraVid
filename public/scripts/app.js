@@ -32,7 +32,7 @@ var set = sets[0],
   screenNo = 1,
   libraryTrack = library['thundercats'];
 
-var screenDomFunc = [centerHeart, jsconfTextCenter],
+var screenDomFunc = [center2xaa, center2xaa],
   freqResolutions = [32,32];
 
 // set mixing params - volumn is getting times by threshold - 2 is the max as the slider returns up to 127
