@@ -30,13 +30,13 @@ var currentEls = [canvasEls[0], canvasEls[1]];
 // set sets & tracks
 var set = sets[0],
   screenNo = 1,
-  libraryTrack = library['thundercats'];
+  libraryTrack = library['danabs'];
 
 var screenDomFunc = [center2xaa, center2xaa],
   freqResolutions = [32,32];
 
 // set mixing params - volumn is getting times by threshold - 2 is the max as the slider returns up to 127
-var threshold = 127, volume = 2;
+var threshold = 64, volume = 2;
 const easing = BezierEasing(0.01, 0.8, 0.8, 0.01);
 
 // import { makeAnalyserNode } from './m_audio.js';
@@ -92,10 +92,11 @@ function render() {
     // for jsconf try just one returned val
     // if (newFreqs[16] > threshold)
 
+    // console.log(newFreqs[8]);
 
-    for (var i=0; i<mixDataCount; i++) {
-      if (newFreqs[i] > threshold){
-        if (i<(mixDataCount/2)) {
+    // for (var i=0; i<mixDataCount; i++) {
+      if (newFreqs[8] > 150){
+        // if (i<(mixDataCount/2)) {
           screens[1].style.opacity = '1';
           screens[0].style.opacity = '0';
           screenDomFunc[1](1, newFreqs);
@@ -103,9 +104,9 @@ function render() {
           screens[1].style.opacity = '0';
           screens[0].style.opacity = '1';
           screenDomFunc[0](0, newFreqs);
-        }
+        // }
       }
-    }//for
+    // }//for
 
   } else {
     renderFrame = true;
