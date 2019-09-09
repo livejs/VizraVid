@@ -30,7 +30,7 @@ var showDom = function showDom(vidEl, domEl) {
 
 function onMIDIMessage(message) {
     data = message.data;
-    // console.log('MIDI data', data);
+    console.log('MIDI data', data);
 
     // Threshold for mixing - this show/hides screens
     if ( (data[0] === quneo.mainSlider[0]) && (data[1] === quneo.mainSlider[1]) ) {
@@ -79,7 +79,7 @@ function onMIDIMessage(message) {
 
             currentEls[screenNo] = videoEls[screenNo];
             screenDomFunc[screenNo] = clearRect;
-            reqAnim();
+            // render();
 
             //set.name
           } else if (libraryTrack.type === 'dom') {
@@ -92,7 +92,7 @@ function onMIDIMessage(message) {
               currentEls[screenNo] = canvasEls[screenNo];
               screenDomFunc[screenNo] = libraryTrack.function;
               freqResolutions[screenNo] = libraryTrack.freqRes;
-              reqAnim();
+              // render();
 
               // var svg = d3.select(svgEls[screenNo]);
               // svg.selectAll('*').remove();

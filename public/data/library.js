@@ -1,5 +1,121 @@
 var library = {
 
+  danabs : {
+    file: "danny/abstract1.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danarial : {
+    file: "danny/arial.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danbuild1 : {
+    file: "danny/build1.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danbuild2 : {
+    file: "danny/build2.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danbuild3 : {
+    file: "danny/build3.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danblocks : {
+    file: "danny/blocks1.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dancity : {
+    file: "danny/city.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dancheeks : {
+    file: "danny/cheeks.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danfore : {
+    file: "danny/forehead.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danglow : {
+    file: "danny/glow.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danlines : {
+    file: "danny/lines.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  danlines2 : {
+    file: "danny/lines2.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dannight1 : {
+    file: "danny/night1.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dannight2 : {
+    file: "danny/night2.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dansmoke : {
+    file: "danny/smoke.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dansquare : {
+    file: "danny/square.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dansubway : {
+    file: "danny/subway.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dantraffic : {
+    file: "danny/traffic.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+  dantrain : {
+    file: "danny/train.mp4",
+    type: "video",
+    for: "danny"
+  },
+
+
+
   islCell : {
     file: "island/cell.mp4",
     type: "video",
@@ -548,6 +664,139 @@ var library = {
     freqRes: 128,
     type: "dom",
     for: "hexagons"
+  },
+
+  jsconfLogoTile: {
+    function: jsconfLogoTile,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsconfLogoScale: {
+    function: jsconfLogoScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsconfTextCenter: {
+    function: jsconfTextCenter,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsconfTextTile: {
+    function: jsconfTextTile,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsconfTextScale: {
+    function: jsconfTextScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSHeartCenter: {
+    function: liveJSHeartCenter,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSHeartScale: {
+    function: liveJSHeartScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSFillHeartScale: {
+    function: liveJSFillHeartScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSTextCenter: {
+    function: liveJSTextCenter,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  liveJSTextScale: {
+    function: liveJSTextScale,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  centerHeart: {
+    function: centerHeart,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  centerHeartThree: {
+    function: centerHeartThree,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  jsConfShapes: {
+    function: jsconfeuAllShapes,
+    freqRes: 32,
+    type: "dom",
+    for: "jsconf"
+  },
+
+  center2xaa: {
+    function: center2xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  scale2xaa: {
+    function: scale2xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  scaleFill2xaa: {
+    function: scaleFill2xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  fill2xaa: {
+    function: fill2xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  center22xaa: {
+    function: center22xaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
+  },
+
+  twotimesaa: {
+    function: twotimesaa,
+    freqRes: 32,
+    type: "dom",
+    for: "sam"
   },
 
 

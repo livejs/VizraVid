@@ -2,37 +2,61 @@
 
 var sets = [
 
+  // {
+  //   name: 'jsconf',
+  //   tracks: [
+  //     'ljsTitle','ljsLogos','ljsBacks','liveJSTextCenter',
+  //     'liveJSHeartCenter','liveJSHeartScale','liveJSFillHeartScale','liveJSTextScale',
+
+  //     // '','','','',
+
+  //     // 'matrix','mill','','','','','','',
+
+  //     // 'pooh','sleepBeu','matrix','topgun',
+  //     // 'mill','startrek','','',
+
+  //     'jsconfTextCenter','jsconfTextScale','centerHeart','centerHeartThree','jsConfShapes','jsconfLogoTile','jsconfLogoScale','jsconfTextTile',
+
+  //     'absRocket','absSpace','absSquare','absBlobs',
+  //     'absLines','absDots2','absCircle','absHex',
+
+  //     'circJelly','circKoll','circMocirc','circOutb',
+  //     'circPoxels','circShifting','circSignal','',
+
+  //   ]
+  // },
+
+  // {
+  //   name: 'abstract',
+  //   tracks: [
+  //     'center2xaa', 'scale2xaa', 'scaleFill2xaa', 'fill2xaa', 'center22xaa', 'twotimesaa', 'ljsLogos', 'ljsBacks',
+
+  //     'absRocket','absSpace','absSquare','absBlobs',
+  //     'absLines','absDots2','absCircle','absHex',
+
+  //     'circJelly','circKoll','circMocirc','circOutb',
+  //     'circPoxels','circShifting','circSignal','',
+
+  //     'pongFast','chuckie','pacmanReg','spaceInv','breakout','donkey','tetrisBW','breakoutShoot',
+
+  //     // 'ctx2Dhex','ctx2Dhex2','ctx2Dhex3','ctx2Dhex4','','','',''
+
+  //   ]
+  // },
+
   {
-    name: 'buda',
+    name: 'danny',
     tracks: [
-      'bpLogo','bpFilm','bpPlace','bpSinner',
-      // 'cfStars', 'cfBack', '', '',
-      '', '', '', '',
+      'danabs','danarial','danblocks','dancity',
+      'danglow','danlines','danlines2','dansmoke',
 
-      'ljsTitle','ljsLogos','ljsBacks','',
-      // 'ljsLilHeart','ljsBigHeart','','',
-      '','','','',
+      'dansquare','dansubway','dantraffic','dantrain',
+      'danbuild1','danbuild2','danbuild3','',
 
-      'matrix','mill','','','','','','',
 
-      'pooh','sleepBeu','matrix','topgun',
-      'mill','startrek','','',
+      'dancheeks','danfore','dannight1','dannight2','','','','',
 
-    ]
-  },
-
-  {
-    name: 'abstract',
-    tracks: [
-      'absRocket','absSpace','absSquare','absBlobs',
-      'absLines','absDots2','absCircle','absHex',
-
-      'circJelly','circKoll','circMocirc','circOutb',
-      'circPoxels','circShifting','circSignal','',
-
-      'ctx2DcentreCirc1','ctx2DcentreCirc2','ctx2Dconcentric1','ctx2Dconcentric2','ctx2Dconcentric21','ctx2Dconcentric3','ctx2Dconcentric31','ctx2Dconcentric4',
-
-      'ctx2Dhex','ctx2Dhex2','ctx2Dhex3','ctx2Dhex4','','','',''
+      '','','','','','','',''
 
     ]
   },
@@ -44,7 +68,7 @@ var sets = [
       'bucky','battle','teenage','dungeons',
 
       'dangermouse','mysterious','bananaman','superted',
-      'powerpuff','pokemon','pony','trapdoor',
+      'powerpuff','pokemon','matrix','trapdoor',
 
 
       'pongReg','pongFast','breakout','breakoutShoot','spaceInv','spaceInvAd','tetrisBW','tetrisCol',

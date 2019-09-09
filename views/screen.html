@@ -18,6 +18,17 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/effects.css">
 
+  <style type="text/css">
+    html, body, .container {background-color: black;}
+    #screen {
+      -webkit-mask-image: url('library/danny/mask.svg');
+
+      -webkit-mask-size: 65% 65%;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+    }
+  </style>
+
 </head>
 <body>
 
@@ -26,11 +37,11 @@
     <section id="screen">
 
       <div class="screen">
-        <!-- <section class="video">
+        <section class="video">
           <video autoplay loop>
             <source src="library/livejs/ljstitle.mp4" type="video/mp4">
           </video>
-        </section> -->
+        </section>
         <section class="dom">
           <canvas></canvas>
         </section>
@@ -38,11 +49,11 @@
 
 
       <div class="screen">
-        <!-- <section class="video">
+        <section class="video">
           <video autoplay loop>
             <source src="library/livejs/ljslogos.mp4" type="video/mp4">
           </video>
-        </section> -->
+        </section>
         <section class="dom">
           <canvas></canvas>
         </section>

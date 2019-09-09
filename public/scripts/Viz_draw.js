@@ -55,13 +55,97 @@ function drawHeart() {
 
 }
 
+function draw2xaa(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x-(100*scale), position.y-(500*scale));
+	ctx.scale(scale, scale);
+
+	ctx.beginPath();
+	ctx.moveTo(-92,492.1);
+	ctx.lineTo(-92.2,491.90000000000003);
+	ctx.lineTo(-191.5,491.90000000000003);
+	ctx.lineTo(-216.6,525);
+	ctx.lineTo(-117.6,655.8);
+	ctx.lineTo(-117.39999999999999,656);
+	ctx.lineTo(-66.69999999999999,656);
+	ctx.lineTo(-115.99999999999999,590.8);
+	ctx.lineTo(-67.89999999999998,590.8);
+	ctx.lineTo(-18.699999999999974,655.8);
+	ctx.lineTo(-18.599999999999973,656);
+	ctx.lineTo(32.10000000000003,656);
+	ctx.lineTo(-92,492.1);
+	ctx.closePath();
+	ctx.moveTo(-141.5,557.1);
+	ctx.lineTo(-165.4,525.5);
+	ctx.lineTo(-117.30000000000001,525.5);
+	ctx.lineTo(-93.4,557.1);
+	ctx.lineTo(-141.5,557.1);
+	ctx.closePath();
+	ctx.moveTo(154.9,426.9);
+	ctx.lineTo(154.70000000000002,426.7);
+	ctx.lineTo(-388.9,426.7);
+	ctx.lineTo(-512.5,590);
+	ctx.lineTo(-537.4,622.9);
+	ctx.lineTo(-512.3,656);
+	ctx.lineTo(-165.39999999999998,656);
+	ctx.lineTo(-240.49999999999997,556.8);
+	ctx.lineTo(-290.09999999999997,622.4);
+	ctx.lineTo(-338.2,622.4);
+	ctx.lineTo(-264.5,525.1);
+	ctx.lineTo(-289.8,491.6);
+	ctx.lineTo(-339.40000000000003,557.2);
+	ctx.lineTo(-388.8,557.2);
+	ctx.lineTo(-414.3,590.8000000000001);
+	ctx.lineTo(-365,590.8000000000001);
+	ctx.lineTo(-388.9,622.4000000000001);
+	ctx.lineTo(-486.4,622.4000000000001);
+	ctx.lineTo(-413.09999999999997,525.6000000000001);
+	ctx.lineTo(-363.7,525.6000000000001);
+	ctx.lineTo(-338.2,492.0000000000001);
+	ctx.lineTo(-387.59999999999997,492.0000000000001);
+	ctx.lineTo(-363.7,460.4000000000001);
+	ctx.lineTo(-265.4,460.4000000000001);
+	ctx.lineTo(-240.49999999999997,493.4000000000001);
+	ctx.lineTo(-215.59999999999997,460.4000000000001);
+	ctx.lineTo(129.50000000000006,460.4000000000001);
+	ctx.lineTo(252.20000000000005,622.5000000000001);
+	ctx.lineTo(204.10000000000005,622.5000000000001);
+	ctx.lineTo(105.50000000000006,492.2000000000001);
+	ctx.lineTo(105.40000000000006,492.0000000000001);
+	ctx.lineTo(6.1,492.0000000000001);
+	ctx.lineTo(-19,525.1);
+	ctx.lineTo(80,655.9000000000001);
+	ctx.lineTo(80.2,656.1000000000001);
+	ctx.lineTo(130.9,656.1000000000001);
+	ctx.lineTo(81.5,590.9000000000001);
+	ctx.lineTo(129.6,590.9000000000001);
+	ctx.lineTo(178.8,655.9000000000001);
+	ctx.lineTo(179,656.1000000000001);
+	ctx.lineTo(278.3,656.1000000000001);
+	ctx.lineTo(303.40000000000003,623.0000000000001);
+	ctx.lineTo(154.9,426.9);
+	ctx.closePath();
+	ctx.moveTo(56,557.1);
+	ctx.lineTo(32.1,525.5);
+	ctx.lineTo(80.2,525.5);
+	ctx.lineTo(104.1,557.1);
+	ctx.lineTo(56,557.1);
+	ctx.closePath();
+
+	ctx.closePath();
+	ctx.resetTransform();
+	ctx.fill();
+	ctx.stroke();
+}
+
 function drawLivejsHeartOutline(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
 	// ctx.save();
 	// console.log(scale, fill, position);
 
   ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
-  ctx.translate(position.x, position.y);
+  ctx.translate(position.x-(107*scale), position.y-(122*scale));
 	ctx.scale(scale, scale);
 
 
@@ -282,7 +366,8 @@ function drawLivejsHeartSolid(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 
 
   ctx.fillStyle = fill;
   ctx.strokeStyle = stroke;
-  ctx.translate(position.x, position.y);
+  ctx.translate(position.x-(40*scale), position.y-(25*scale));
+  // ctx.translate(position.x, position.y);
 	ctx.scale(scale, scale);
 
 	ctx.beginPath();
@@ -468,10 +553,13 @@ function drawLivejsHeartSolid(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 
 	ctx.stroke();
 }
 
-function drawLivejsText() {
-	ctx.save();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+function drawLivejsText(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x-(161*scale), position.y-(40*scale));
+	ctx.scale(scale, scale);
+
 	ctx.beginPath();
 	ctx.moveTo(25.628,56.947);
 	ctx.bezierCurveTo(20.093,56.947,10.764,56.947,10.764,38.443);
@@ -501,9 +589,7 @@ function drawLivejsText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+
 	ctx.beginPath();
 	ctx.moveTo(56.281,52.59);
 	ctx.bezierCurveTo(51.616,52.59,43.772999999999996,52.59,43.772999999999996,37.673);
@@ -524,9 +610,7 @@ function drawLivejsText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+
 	ctx.beginPath();
 	ctx.moveTo(76.322,52.59);
 	ctx.bezierCurveTo(75.143,52.59,75.143,51.104000000000006,75.143,50.283);
@@ -544,6 +628,9 @@ function drawLivejsText() {
 	ctx.bezierCurveTo(98.56599999999999,51.35900000000001,98.56599999999999,52.59000000000001,97.49,52.59000000000001);
 	ctx.lineTo(76.322,52.59000000000001);
 	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
 	ctx.moveTo(84.779,11.533);
 	ctx.bezierCurveTo(83.6,11.533,83.6,9.943999999999999,83.6,9.225999999999999);
 	ctx.bezierCurveTo(83.6,8.407,83.6,6.818,84.779,6.818);
@@ -554,9 +641,7 @@ function drawLivejsText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+
 	ctx.beginPath();
 	ctx.moveTo(119.275,52.59);
 	ctx.bezierCurveTo(118.251,52.59,117.738,52.436,117.02000000000001,51);
@@ -578,9 +663,7 @@ function drawLivejsText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+
 	ctx.beginPath();
 	ctx.moveTo(155.617,52.59);
 	ctx.bezierCurveTo(150.696,52.59,143.315,52.59,143.315,34.803000000000004);
@@ -595,6 +678,9 @@ function drawLivejsText() {
 	ctx.bezierCurveTo(168.174,51.05200000000001,168.174,52.48700000000001,166.995,52.48700000000001);
 	ctx.lineTo(155.617,52.59);
 	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
 	ctx.moveTo(164.33,32.497);
 	ctx.bezierCurveTo(164.02300000000002,21.631999999999998,160.794,21.631999999999998,157.667,21.631999999999998);
 	ctx.bezierCurveTo(157.257,21.631999999999998,156.796,21.631999999999998,156.386,21.631999999999998);
@@ -605,9 +691,7 @@ function drawLivejsText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+
 	ctx.beginPath();
 	ctx.moveTo(191.803,47.618);
 	ctx.bezierCurveTo(190.984,47.618,189.395,47.618,189.395,46.439);
@@ -618,6 +702,9 @@ function drawLivejsText() {
 	ctx.lineTo(194.161,46.439);
 	ctx.bezierCurveTo(194.11,47.618,192.573,47.618,191.803,47.618);
 	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
 	ctx.moveTo(191.24,28.55);
 	ctx.bezierCurveTo(190.625,28.55,189.395,28.55,189.395,27.474);
 	ctx.lineTo(189.395,23.322);
@@ -629,9 +716,7 @@ function drawLivejsText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+
 	ctx.beginPath();
 	ctx.moveTo(209.231,64.789);
 	ctx.bezierCurveTo(208.052,64.789,208.052,63.252,208.052,62.381);
@@ -649,6 +734,9 @@ function drawLivejsText() {
 	ctx.lineTo(209.231,64.687);
 	ctx.lineTo(209.231,64.789);
 	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
 	ctx.moveTo(224.25,11.533);
 	ctx.bezierCurveTo(223.174,11.533,223.174,10.251999999999999,223.174,9.225999999999999);
 	ctx.bezierCurveTo(223.174,8.149999999999999,223.174,6.818,224.25,6.818);
@@ -659,9 +747,7 @@ function drawLivejsText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+
 	ctx.beginPath();
 	ctx.moveTo(257.31,52.641);
 	ctx.bezierCurveTo(253.722,52.641,245.26500000000001,52.641,245.26500000000001,42.595);
@@ -689,9 +775,7 @@ function drawLivejsText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#010202";
+
 	ctx.beginPath();
 	ctx.moveTo(281.349,56.947);
 	ctx.bezierCurveTo(280.17,56.947,280.17,55.357,280.17,54.64);
@@ -719,16 +803,19 @@ function drawLivejsText() {
 	ctx.bezierCurveTo(296.727,56.894999999999996,287.45,56.894999999999996,281.86199999999997,56.894999999999996);
 	ctx.lineTo(281.349,56.947);
 	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.restore();
 }
 
 // js conf eu specific
-function drawJsconfeuLogo() {
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+function drawJsconfeuLogo(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+	ctx.strokeStyle = stroke;
+	ctx.translate(position.x-(98*scale), position.y-(98*scale));
+	ctx.scale(scale, scale);
+
 	ctx.beginPath();
 	ctx.moveTo(185.621,0);
 	ctx.lineTo(6.821,0);
@@ -746,15 +833,19 @@ function drawJsconfeuLogo() {
 	ctx.bezierCurveTo(96.22000000000001,91.761,111.39000000000001,91.80099999999999,120.721,101.184);
 	ctx.bezierCurveTo(130.053,91.801,145.223,91.761,154.60500000000002,101.094);
 	ctx.bezierCurveTo(163.985,110.424,164.205,125.465,153.888,135.784);
+	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
 }
 
-function drawJsconfeuText() {
-	ctx.save();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+function drawJsconfeuText(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x-(162*scale), position.y-(29*scale));
+	ctx.scale(scale, scale);
+
 	ctx.beginPath();
 	ctx.moveTo(17.312,31.918);
 	ctx.bezierCurveTo(17.312,40.168,17.244,44.226,10.956000000000001,50.446);
@@ -771,9 +862,7 @@ function drawJsconfeuText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+
 	ctx.beginPath();
 	ctx.moveTo(46.567,20.692);
 	ctx.bezierCurveTo(50.151,23.059,53.261,26.372,53.261,32.053);
@@ -791,11 +880,10 @@ function drawJsconfeuText() {
 	ctx.bezierCurveTo(45.551,11.69799999999999,43.387,9.19599999999999,39.93900000000001,9.19599999999999);
 	ctx.bezierCurveTo(37.30200000000001,9.19599999999999,35.67900000000001,10.61699999999999,35.67900000000001,12.44299999999999);
 	ctx.bezierCurveTo(35.68,15.959,41.766,17.514,46.567,20.692);
+
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+
 	ctx.beginPath();
 	ctx.moveTo(80.003,35.84);
 	ctx.bezierCurveTo(81.828,35.84,83.451,35.502,85.142,34.825);
@@ -812,11 +900,10 @@ function drawJsconfeuText() {
 	ctx.bezierCurveTo(83.11300000000001,10.211000000000004,81.42300000000002,9.804000000000004,79.46200000000002,9.804000000000004);
 	ctx.bezierCurveTo(73.51000000000002,9.804000000000004,68.10100000000001,13.659000000000004,68.10100000000001,22.585000000000004);
 	ctx.bezierCurveTo(68.101,31.783,73.781,35.84,80.003,35.84);
+
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+
 	ctx.beginPath();
 	ctx.moveTo(120.81,0);
 	ctx.bezierCurveTo(135.01,0,143.936,9.67,143.936,22.722);
@@ -828,11 +915,10 @@ function drawJsconfeuText() {
 	ctx.bezierCurveTo(133.11700000000002,14.133000000000003,128.24900000000002,9.129000000000003,120.67500000000001,9.129000000000003);
 	ctx.bezierCurveTo(113.101,9.129000000000003,108.299,14.133000000000003,108.299,22.788000000000004);
 	ctx.bezierCurveTo(108.298,31.513,113.168,36.517,120.742,36.517);
+
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+
 	ctx.beginPath();
 	ctx.moveTo(161.421,39.29);
 	ctx.bezierCurveTo(161.421,41.183,161.421,42.4,160.60899999999998,43.482);
@@ -856,9 +942,7 @@ function drawJsconfeuText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+
 	ctx.beginPath();
 	ctx.moveTo(212.014,39.29);
 	ctx.bezierCurveTo(212.014,41.116,212.014,42.4,211.202,43.482);
@@ -884,9 +968,7 @@ function drawJsconfeuText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+
 	ctx.beginPath();
 	ctx.moveTo(233.168,45.307);
 	ctx.bezierCurveTo(229.518,45.307,227.15,42.942,227.15,39.29);
@@ -895,9 +977,7 @@ function drawJsconfeuText() {
 	ctx.bezierCurveTo(239.188,42.941,236.821,45.307,233.168,45.307);
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+
 	ctx.beginPath();
 	ctx.moveTo(257.514,17.243);
 	ctx.lineTo(264.885,17.243);
@@ -926,9 +1006,7 @@ function drawJsconfeuText() {
 	ctx.closePath();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.save();
-	ctx.fillStyle = "#e00a79";
+
 	ctx.beginPath();
 	ctx.moveTo(307.571,33.744);
 	ctx.bezierCurveTo(309.46500000000003,31.444,309.533,28.334,309.533,25.9);
@@ -951,15 +1029,21 @@ function drawJsconfeuText() {
 	ctx.bezierCurveTo(291.61500000000007,28.334,291.61500000000007,31.444,293.50800000000004,33.744);
 	ctx.bezierCurveTo(294.92900000000003,35.435,297.22800000000007,36.449,300.60900000000004,36.449);
 	ctx.bezierCurveTo(303.919,36.449,306.151,35.435,307.571,33.744);
+	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
-	ctx.restore();
+
 }
 
-function drawJsconfeuLeaf() {
-	ctx.save();
-	ctx.fillStyle = "#dde4f2";
+function drawJsconfeuLeaf(ctx, {scale = 1,  position = {x: 0, y: 0}, rotate = 0, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x, position.y);
+	ctx.scale(scale, scale);
+	ctx.rotate(rotate);
+
 	ctx.beginPath();
 	ctx.moveTo(318,141.212116);
 	ctx.lineTo(318,250.014212);
@@ -1055,19 +1139,19 @@ function drawJsconfeuLeaf() {
 	ctx.bezierCurveTo(313.991572,149.012809,316.156713,145.966435,318,141.212116);
 	ctx.lineTo(318,141.212116);
 	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
 }
 
-function drawJsconfeuRectangle() {
-	ctx.save();
-	ctx.fillStyle = "#dde4f2";
-	ctx.translate(140.111976,108.554442);
-	ctx.translate(0,0);
-	ctx.rotate(0.6457718232379019);
-	ctx.translate(0,0);
-	ctx.translate(-140.111976,-108.554442);
+function drawJsconfeuRectangle(ctx, {scale = 1,  position = {x: 0, y: 0}, rotate = 1, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x, position.y);
+	ctx.scale(scale, scale);
+	ctx.rotate(rotate);
+
 	ctx.beginPath();
 	ctx.moveTo(131.973349,53.173491);
 	ctx.bezierCurveTo(135.316832,58.3815348,136.723215,53.8442263,133.654629,55.3741653);
@@ -1116,19 +1200,20 @@ function drawJsconfeuRectangle() {
 	ctx.bezierCurveTo(93.2748238,62.6581755,100.431835,63.50644,104.524013,60.2171491);
 	ctx.bezierCurveTo(107.444987,58.1455585,116.890303,61.101357,115.588374,58.7509706);
 	ctx.bezierCurveTo(118.889638,53.0797256,119.947631,54.6856146,131.973349,53.173491);
+	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
 }
 
-function drawJsconfeuSnake() {
-	ctx.save();
-	ctx.fillStyle = "#dde4f2";
-	ctx.translate(106.251659,132.858849);
-	ctx.translate(0,0);
-	ctx.rotate(-1.1693705988362009);
-	ctx.translate(0,0);
-	ctx.translate(-106.251659,-132.858849);
+function drawJsconfeuSnake(ctx, {scale = 1,  position = {x: 0, y: 0}, rotate = 1, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x, position.y);
+	ctx.scale(scale, scale);
+	ctx.rotate(rotate);
+
 	ctx.beginPath();
 	ctx.moveTo(264.122525,175.858106);
 	ctx.bezierCurveTo(263.799958,176.319041,263.428832,176.755785,263.009294,177.161888);
@@ -1206,19 +1291,19 @@ function drawJsconfeuSnake() {
 	ctx.bezierCurveTo(254.122842,160.869052,259.782197,160.96255,263.217023,164.512433);
 	ctx.bezierCurveTo(266.24422,167.643492,266.530241,172.417576,264.122525,175.858106);
 	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
-	ctx.stroke();
-	ctx.restore();
+		ctx.stroke();
 }
 
-function drawJsconfeuTriangle() {
-	ctx.save();
-	ctx.fillStyle = "#f3ecda";
-	ctx.translate(107.747575,108.928347);
-	ctx.translate(0,0);
-	ctx.rotate(-0.767944870877505);
-	ctx.translate(0,0);
-	ctx.translate(-107.747575,-108.928347);
+function drawJsconfeuTriangle(ctx, {scale = 1,  position = {x: 0, y: 0}, rotate = 1, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x, position.y);
+	ctx.scale(scale, scale);
+	ctx.rotate(rotate);
+
 	ctx.beginPath();
 	ctx.moveTo(80.0812278,-16.2457321);
 	ctx.bezierCurveTo(85.2514189,-10.8320415,76.0496307,-11.3680943,74.5831926,-8.16772605);
@@ -1284,14 +1369,19 @@ function drawJsconfeuTriangle() {
 	ctx.bezierCurveTo(114.213349,-32.91476,107.84697,-35.5693291,106.109396,-33.2346196);
 	ctx.bezierCurveTo(101.360086,-32.6640113,95.8824304,-34.0763555,92.9105674,-27.4576536);
 	ctx.bezierCurveTo(90.5686968,-23.5493411,83.1895449,-19.0110559,80.0812278,-16.2457321);
+	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
 }
 
-function drawJsconfeuCircle(ctx) {
-	ctx.save();
-	ctx.fillStyle = "#f3ecda";
+function drawJsconfeuCircle(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x, position.y);
+	ctx.scale(scale, scale);
+
 	ctx.beginPath();
 	ctx.moveTo(301.477049,111.019962);
 	ctx.bezierCurveTo(300.90174,103.040865,297.324928,98.2372565,295.484458,88.8618833);
@@ -1314,20 +1404,19 @@ function drawJsconfeuCircle(ctx) {
 	ctx.bezierCurveTo(249.43886,251.072251,259.692908,229.299711,278.751017,210.444765);
 	ctx.bezierCurveTo(291.912852,189.625654,310.018185,161.546424,303.702795,142.480474);
 	ctx.bezierCurveTo(304.431694,132.151673,302.476683,118.746374,301.477049,111.019962);
+	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
 }
 
-function drawJsconfeuSquare(ctx) {
-	ctx.save();
-	ctx.fillStyle = "#dde4f2";
-	ctx.translate(243.14445,238.92935);
-	ctx.scale(-1,1);
-	ctx.translate(0,0);
-	ctx.rotate(0.6457718232379019);
-	ctx.translate(0,0);
-	ctx.translate(-243.14445,-238.92935);
+function drawJsconfeuSquare(ctx, {scale = 1,  position = {x: 0, y: 0}, fill = 'white', stroke = 'white'} = {}) {
+
+	ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+  ctx.translate(position.x, position.y);
+	ctx.scale(scale, scale);
+
 	ctx.beginPath();
 	ctx.moveTo(65.6964001,402.037399);
 	ctx.bezierCurveTo(67.1556207,402.147764,68.457955,401.390068,68.9464418,400.293497);
@@ -1526,9 +1615,9 @@ function drawJsconfeuSquare(ctx) {
 	ctx.bezierCurveTo(67.6744151,397.927024,61.0415133,401.685081,65.6964001,402.037399);
 	ctx.lineTo(65.6964001,402.037399);
 	ctx.closePath();
+	ctx.resetTransform();
 	ctx.fill();
 	ctx.stroke();
-	ctx.restore();
 }
 
 
