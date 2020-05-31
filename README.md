@@ -1,28 +1,16 @@
-# Vizra
+# VizraVid
 
-### Welcome to Vizra.
+### Welcome to VizraVid.
 
->Vizra is a piece of software to analyse audio and create visualisations which can be projected live
+>VizraVid is a piece of software which analyses audio and mixes two video elements based on the output
 
 ---
-*N.B.* I (Ruth/@Rumyra) created Vizra for myself. Now I've gone about in circles with this, and it is to satisfy my own need. Thus meaning it is probably not set up how you would need it.
+*N.B.* I (Ruth/@Rumyra) created VizraVid for myself. It's been through a few versions, but I've settled on it _just doing one thing_. There's a suite of Vizra software, this one is for video mixing.
 
 This is the joy of code, that we can create bespoke software to satisfy our own needs. And it is useful none the less, feel free to poke around the code, use it and ask any questions.
 ---
 
-#### Work in progress
-
-This is very much a learning experience for me, I am creating a piece of software solo and it is still a work in progress.
-
----
-
 #### Set up
 
-Basic express build, so run npm install once you have cloned the repo.
-
-- Run `npm run vizra`
-- Go to `localhost:3000`
-- Visuals are run from `/screen` view
-
-The more I build on this the more I will expand on this readme 🙏🏻
+Run it on a local server, like python simple server, or I like http-server (node module).
 

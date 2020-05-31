@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VizraVid | MIX THOSE VIDS</title>
+</head>
+
+<style type="text/css">
+	:root {
+		--blur: 0px;
+		--bright: 1;
+		--contrast: 1;
+		--gray: 0%;
+		--hue: 0deg;
+		--invert: 0%;
+		--sepia: 0%;
+
+		--zoom: 1;
+		--transX: 0vw;
+		--transY: 0vh;
+		--rotate: 0turn;
+
+		--fadeCol: black;
+		--fadeOp: 0;
+	}
+	html, body, div, video {margin: 0px; padding: 0px;}
+	#screen {
+		background: #333;
+		width: 100vw; height: 100vh;
+		overflow: hidden;
+		display: grid;
+		grid-template-areas: "video";
+	}
+	video, #fade {
+		width: 100%; height: 100%;
+		object-fit: cover; grid-area: video;
+	}
+	video {
+		filter:
+			blur(var(--blur))
+			brightness(var(--bright)) contrast(var(--bright))
+			grayscale(var(--gray)) sepia(var(--sepia))
+			hue-rotate(var(--hue)) invert(var(--invert))
+		;
+		transform: scale(var(--zoom)) translateX(var(--transX)) translateY(var(--transY)) rotate(var(--rotate));
+	}
+	#fade {background-color: var(--fadeCol); opacity: var(--fadeOp);}
+</style>
+
+<body>
+
+	<div id="screen">
+
+		<video id="vidOne" loop autoplay></video>
+
+		<video id="vidTwo" loop autoplay></video>
+
+		<div id="fade"></div>
+
+	</div>
+
+	<script type="module" src="app.js"></script>
+
+</body>
+</html>
